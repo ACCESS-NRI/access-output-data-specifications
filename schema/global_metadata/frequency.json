@@ -5,5 +5,27 @@
     "description": "Sampling frequency of the data",
     "type": "string",
     "examples": ["12hr", "1day", "1yr"],
-    "$comment": "TODO: Can we combine enum and regex patterns here?"
+    "oneOf": [
+        {
+            "pattern": "^fx$"
+        },
+        {
+            "pattern": "^subhr$"
+        },
+        {
+            "pattern": "^\\d+hr$"
+        },
+        {
+            "pattern": "^\\d+day$"
+        },
+        {
+            "pattern": "^\\d+mon$"
+        },
+        {
+            "pattern": "^\\d+yr$"
+        },
+        {
+            "pattern": "^\\d+dec$"
+        }
+    ]
 }
