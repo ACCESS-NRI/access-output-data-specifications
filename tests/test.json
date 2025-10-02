@@ -3,7 +3,7 @@
         "title": "this is a title",
         "experiment_uuid": "F6B536FA-766D-4609-B767-754C9424440A",
         "run_id": "git hash?",
-        "creation_date": "2025-12-03x",
+        "creation_date": "2025-12-03",
         "realm": ["atmos"],
         "model": "ACCESS-ESM1.6",
         "model_version": "2025.06.001",
