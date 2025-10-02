@@ -1,0 +1,19 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v6.0.0
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+  - id: check-json
+  - id: check-added-large-files
+- repo: https://github.com/sourcemeta/jsonschema
+  rev: v11.8.3
+  hooks:
+  - id: sourcemeta-jsonschema-lint
+    name: sourcemeta-jsonschema-lint
+    description: Lint schema files
+    entry: jsonschema lint
+    language: system
+    types_or: [ json, yaml ]
+    minimum_pre_commit_version: 2.9.0
+    files: schema/
