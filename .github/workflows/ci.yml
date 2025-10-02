@@ -1,6 +1,6 @@
 name: JSON Schema CI
 
-on: [pull_request, push, workflow_distpatch]
+on: [pull_request, push, workflow_dispatch]
 
 jobs:
   test:
