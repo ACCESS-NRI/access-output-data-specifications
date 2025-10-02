@@ -1,0 +1,79 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "global_metadata.json",
+    "title": "ACCESS Global Attributes",
+    "description": "File-level metadata for ACCESS ESM1.6 data",
+    "type": "object",
+    "properties": {
+        "title": {
+            "$ref": "global_metadata/title.json"
+        },
+        "experiment_uuid": {
+            "$ref": "global_metadata/uuid.json"
+        },
+        "run_id": {
+            "$ref": "global_metadata/run_id.json"
+        },
+        "creation_date": {
+            "$ref": "global_metadata/creation_date.json"
+        },
+        "realm": {
+            "$ref": "global_metadata/realm.json"
+        },
+        "model": {
+            "$ref": "global_metadata/model.json"
+        },
+        "model_version": {
+            "$ref": "global_metadata/model_version.json"
+        },
+        "base_configuration": {
+            "$ref": "global_metadata/base_configuration.json"
+        },
+        "experiment_url": {
+            "$ref": "global_metadata/experiment_url.json"
+        },
+        "frequency": {
+            "$ref": "global_metadata/frequency.json"
+        },
+        "grid": {
+            "$ref": "global_metadata/grid.json"
+        },
+        "Conventions": {
+            "$ref": "global_metadata/Conventions.json"
+        },
+        "licence": {
+            "$ref": "global_metadata/licence.json"
+        },
+        "contact": {
+            "$ref": "global_metadata/contact.json"
+        },
+        "data_specification": {
+            "$ref": "global_metadata/data_specification.json"
+        },
+        "_IsNetcdf4": {
+            "$ref": "global_metadata/_IsNetcdf4.json"
+        },
+        "_Format": {
+            "$ref": "global_metadata/_Format.json"
+        }
+    },
+    "required": [
+        "title",
+        "experiment_uuid",
+        "run_id",
+        "creation_date",
+        "realm",
+        "model",
+        "model_version",
+        "base_configuration",
+        "experiment_url",
+        "frequency",
+        "grid",
+        "Conventions",
+        "licence",
+        "contact",
+        "data_specification",
+        "_IsNetcdf4",
+        "_Format"
+    ]
+}

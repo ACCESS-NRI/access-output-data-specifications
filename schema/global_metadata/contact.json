@@ -1,0 +1,9 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "global_metadata/contact.json",
+    "title": "contact",
+    "description": "Email address of the contact for the data",
+    "type": "string",
+    "examples": ["data.access.nri@anu.edu.au"],
+    "pattern": "\\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\\b"
+}

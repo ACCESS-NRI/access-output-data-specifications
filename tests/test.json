@@ -1,0 +1,21 @@
+{
+    "global_metadata": {
+        "title": "this is a title",
+        "experiment_uuid": "F6B536FA-766D-4609-B767-754C9424440A",
+        "run_id": "git hash?",
+        "creation_date": "2025-12-03x",
+        "realm": ["atmos"],
+        "model": "ACCESS-ESM1.6",
+        "model_version": "2025.06.001",
+        "base_configuration": "release-preindustrial+concentrations-2.0",
+        "experiment_url": "x",
+        "frequency": "1hr",
+        "grid": "grid goes here",
+        "Conventions": "CF-1.11",
+        "licence": "CC-BY-4.0",
+        "contact": "data.access.nri@anu.edu.au",
+        "data_specification": "ACCESS Output Data Specification v0.1 XX.XXXX/zenodo.XXXXX",
+        "_IsNetcdf4": "yes",
+        "_Format": "netCDF-4"
+    }
+}

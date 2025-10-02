@@ -1,0 +1,14 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "file:/Users/joshua.torrance/repos/schema-test/schemas/esm16.json",
+    "title": "ACCESS ESM1.6 Model Output Data Specification",
+    "description": "Not sure what to put here",
+    "type": "object",
+    "properties": {
+        "global_metadata": {
+            "description": "File-level metadata for ACCESS ESM1.6 data",
+            "$ref": "global_metadata.json"
+        }
+    },
+    "required": ["global_metadata"]
+}

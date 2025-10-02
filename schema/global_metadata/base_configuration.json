@@ -1,0 +1,8 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "global_metadata/TEMPLATE.json",
+    "title": "base_configuration",
+    "description": "Base configuration used - MORE INFO?",
+    "type": "string",
+    "examples": ["release-preindustrial+concentrations-2.0"]
+}

@@ -1,0 +1,8 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "global_metadata/model.json",
+    "title": "model",
+    "description": "Name of the model used to create the data",
+    "type": "string",
+    "examples": ["ACCESS-ESM1.6"]
+}

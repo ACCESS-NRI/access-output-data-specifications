@@ -1,0 +1,9 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "global_metadata/frequency.json",
+    "title": "frequency",
+    "description": "Sampling frequency of the data",
+    "type": "string",
+    "examples": ["12hr", "1day", "1yr"],
+    "$comment": "TODO: Can we combine enum and regex patterns here?"
+}
