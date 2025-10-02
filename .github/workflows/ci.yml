@@ -1,0 +1,24 @@
+name: JSON Schema CI
+
+on: [pull_request, push, workflow_distpatch]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install the Sourcemeta JSON Schema CLI
+        uses: sourcemeta/jsonschema@v11.8.3
+
+      - name: Check schemas against their metaschemas
+        run: jsonschema metaschema --verbose schema/
+
+      - name: Check schemas are formatted
+        run: jsonschema fmt --check --verbose schema/
+
+      - name: Lint schemas
+        run: jsonschema lint --verbose schema/
+
+      - name: Run test suite
+        run: jsonschema test --verbose tests/ --resolve schema
