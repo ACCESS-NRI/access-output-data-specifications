@@ -4,9 +4,9 @@
     "description": "Not sure what to put here",
     "type": "object",
     "properties": {
-        "global_metadata": {
-            "$ref": "global_metadata.json"
+        "global": {
+            "$ref": "global.json"
         }
     },
-    "required": ["global_metadata"]
+    "required": ["global"]
 }

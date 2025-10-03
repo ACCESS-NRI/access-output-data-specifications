@@ -4,7 +4,7 @@
     "title": "realm",
     "description": "Realm(s) where the variable is defined, as a comma separated list",
     "$comment": "This will probably be a string not an array. Currently spec allows one or more elements...",
-    "type": "array",    
+    "type": "array",
     "items": {
         "enum": [
             "aerosol",

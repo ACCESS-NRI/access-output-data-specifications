@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "global_metadata.json",
+    "$id": "global.json",
     "title": "ACCESS Global Attributes",
     "description": "File-level metadata for ACCESS ESM1.6 data",
     "type": "object",
