@@ -12,7 +12,7 @@ repos:
   - id: sourcemeta-jsonschema-lint
     name: sourcemeta-jsonschema-lint
     description: Lint schema files
-    entry: jsonschema fmt
+    entry: jsonschema lint
     language: system
     types_or: [ json, yaml ]
     minimum_pre_commit_version: 2.9.0
