@@ -8,5 +8,5 @@
             "$ref": "global.json"
         }
     },
-    "required": ["global"]
+    "required": ["global"]   
 }
