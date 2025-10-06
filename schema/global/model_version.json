@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "global_metadata/TEMPLATE.json",
+  "$id": "global_metadata/model_version.json",
   "title": "model_version",
   "description": "Version of the model used to create the data",
   "$comment": "Use 'unknown if not an official release",
