@@ -1,8 +1,8 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "global_metadata/licence.json",
-    "title": "licence",
-    "description": "Information on the licence for the data to ensure all users have access to the terms of use",
-    "type": "string",
-    "examples": ["CC-BY-4.0"]
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "global_metadata/licence.json",
+  "title": "licence",
+  "description": "Information on the licence for the data to ensure all users have access to the terms of use",
+  "examples": [ "CC-BY-4.0" ],
+  "type": "string"
 }

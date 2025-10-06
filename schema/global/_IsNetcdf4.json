@@ -1,8 +1,8 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "global_metadata/_IsNetcdf4.json",
-    "title": "_IsNetcdf4",
-    "description": "DESCRIPTION",
-    "type": "string",
-    "examples": ["yes"]
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "global_metadata/_IsNetcdf4.json",
+  "title": "_IsNetcdf4",
+  "description": "DESCRIPTION",
+  "examples": [ "yes" ],
+  "type": "string"
 }

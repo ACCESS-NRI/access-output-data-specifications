@@ -1,12 +1,12 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "ACCESS ESM1.6 Model Output Data Specification",
-    "description": "Not sure what to put here",
-    "type": "object",
-    "properties": {
-        "global": {
-            "$ref": "global.json"
-        }
-    },
-    "required": ["global"]
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ACCESS ESM1.6 Model Output Data Specification",
+  "description": "Not sure what to put here",
+  "type": "object",
+  "required": [ "global" ],
+  "properties": {
+    "global": {
+      "$ref": "global.json"
+    }
+  }
 }

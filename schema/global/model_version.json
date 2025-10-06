@@ -1,9 +1,9 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "global_metadata/TEMPLATE.json",
-    "title": "model_version",
-    "description": "Version of the model used to create the data",
-    "type": "string",
-    "examples": ["2025.06.001"],
-    "$comment": "Use 'unknown if not an official release"
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "global_metadata/TEMPLATE.json",
+  "title": "model_version",
+  "description": "Version of the model used to create the data",
+  "$comment": "Use 'unknown if not an official release",
+  "examples": [ "2025.06.001" ],
+  "type": "string"
 }

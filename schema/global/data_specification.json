@@ -1,8 +1,8 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "global_metadata/data_specification.json",
-    "title": "data_specification",
-    "description": "Version of this data specification used to generate the data",
-    "type": "string",
-    "examples": ["ACCESS Output Data Specification v0.1 XX.XXXX/zenodo.XXXXX"]
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "global_metadata/data_specification.json",
+  "title": "data_specification",
+  "description": "Version of this data specification used to generate the data",
+  "examples": [ "ACCESS Output Data Specification v0.1 XX.XXXX/zenodo.XXXXX" ],
+  "type": "string"
 }

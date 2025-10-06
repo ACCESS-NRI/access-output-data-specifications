@@ -1,8 +1,8 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "global_metadata/experiment_url.json",
-    "title": "experiment_url",
-    "description": "Git repository URL that describes the experiment",
-    "type": "string",
-    "examples": []
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "global_metadata/experiment_url.json",
+  "title": "experiment_url",
+  "description": "Git repository URL that describes the experiment",
+  "examples": [],
+  "type": "string"
 }

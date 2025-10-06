@@ -1,13 +1,13 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "global_metadata/_Format.json",
-    "title": "_Format",
-    "description": "Details on the netCDF format used",
-    "type": "string",
-    "examples": [
-        "classic",
-        "64-bit offset",
-        "netCDF-4",
-        "netCDF-4 classic model"
-    ]
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "global_metadata/_Format.json",
+  "title": "_Format",
+  "description": "Details on the netCDF format used",
+  "examples": [
+    "classic",
+    "64-bit offset",
+    "netCDF-4",
+    "netCDF-4 classic model"
+  ],
+  "type": "string"
 }

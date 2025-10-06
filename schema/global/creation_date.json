@@ -1,9 +1,9 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "global_metadata/creation_date.json",
-    "title": "creation_date",
-    "description": "Date the file was created",
-    "examples": ["2025-08-12"],
-    "pattern": "^\\d{4}-(1[012]|0[1-9])-(3[01]|[12][0-9]|0[1-9])$",
-    "$comment": "Formatted as YYYY-MM-DD"
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "global_metadata/creation_date.json",
+  "title": "creation_date",
+  "description": "Date the file was created",
+  "$comment": "Formatted as YYYY-MM-DD",
+  "examples": [ "2025-08-12" ],
+  "pattern": "^\\d{4}-(1[012]|0[1-9])-(3[01]|[12][0-9]|0[1-9])$"
 }

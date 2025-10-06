@@ -1,22 +1,22 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "global_metadata/realm.json",
-    "title": "realm",
-    "description": "Realm(s) where the variable is defined, as a comma separated list",
-    "$comment": "This will probably be a string not an array. Currently spec allows one or more elements...",
-    "type": "array",
-    "items": {
-        "enum": [
-            "aerosol",
-            "atmos",
-            "atmosChem",
-            "land",
-            "landIce",
-            "ocean",
-            "ocnBgchem",
-            "seaIce"
-        ]
-    },
-    "minItems": 1,
-    "uniqueItems": true
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "global_metadata/realm.json",
+  "title": "realm",
+  "description": "Realm(s) where the variable is defined, as a comma separated list",
+  "$comment": "This will probably be a string not an array. Currently spec allows one or more elements...",
+  "type": "array",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "enum": [
+      "aerosol",
+      "atmos",
+      "atmosChem",
+      "land",
+      "landIce",
+      "ocean",
+      "ocnBgchem",
+      "seaIce"
+    ]
+  }
 }
