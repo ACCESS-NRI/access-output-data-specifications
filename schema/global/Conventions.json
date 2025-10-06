@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "global_metadata/Conventions.json",
+  "$id": "global/Conventions.json",
   "title": "Conventions",
   "description": "Convention(s) used with their versions, as a comma separated list",
   "examples": [ "CF-1.11" ],

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "global_metadata/contact.json",
+  "$id": "global/contact.json",
   "title": "contact",
   "description": "Email address of the contact for the data",
   "examples": [ "data.access.nri@anu.edu.au" ],

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "global_metadata/frequency.json",
+  "$id": "global/frequency.json",
   "title": "frequency",
   "description": "Sampling frequency of the data",
   "examples": [ "12hr", "1day", "1yr" ],

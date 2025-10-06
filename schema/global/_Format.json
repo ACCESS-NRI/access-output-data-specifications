@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "global_metadata/_Format.json",
+  "$id": "global/_Format.json",
   "title": "_Format",
   "description": "Details on the netCDF format used",
   "examples": [

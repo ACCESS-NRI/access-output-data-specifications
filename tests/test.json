@@ -5,7 +5,7 @@
             "description": "Full ESM1.6",
             "valid": true,
             "data": {
-                "global_metadata": {
+                "global": {
                     "title": "this is a title",
                     "experiment_uuid": "F6B536FA-766D-4609-B767-754C9424440A",
                     "run_id": "git hash?",

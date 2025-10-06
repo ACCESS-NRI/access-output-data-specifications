@@ -25,55 +25,55 @@
   ],
   "properties": {
     "title": {
-      "$ref": "global_metadata/title.json"
+      "$ref": "global/title.json"
     },
     "Conventions": {
-      "$ref": "global_metadata/Conventions.json"
+      "$ref": "global/Conventions.json"
     },
     "_Format": {
-      "$ref": "global_metadata/_Format.json"
+      "$ref": "global/_Format.json"
     },
     "_IsNetcdf4": {
-      "$ref": "global_metadata/_IsNetcdf4.json"
+      "$ref": "global/_IsNetcdf4.json"
     },
     "base_configuration": {
-      "$ref": "global_metadata/base_configuration.json"
+      "$ref": "global/base_configuration.json"
     },
     "contact": {
-      "$ref": "global_metadata/contact.json"
+      "$ref": "global/contact.json"
     },
     "creation_date": {
-      "$ref": "global_metadata/creation_date.json"
+      "$ref": "global/creation_date.json"
     },
     "data_specification": {
-      "$ref": "global_metadata/data_specification.json"
+      "$ref": "global/data_specification.json"
     },
     "experiment_url": {
-      "$ref": "global_metadata/experiment_url.json"
+      "$ref": "global/experiment_url.json"
     },
     "experiment_uuid": {
-      "$ref": "global_metadata/uuid.json"
+      "$ref": "global/uuid.json"
     },
     "frequency": {
-      "$ref": "global_metadata/frequency.json"
+      "$ref": "global/frequency.json"
     },
     "grid": {
-      "$ref": "global_metadata/grid.json"
+      "$ref": "global/grid.json"
     },
     "licence": {
-      "$ref": "global_metadata/licence.json"
+      "$ref": "global/licence.json"
     },
     "model": {
-      "$ref": "global_metadata/model.json"
+      "$ref": "global/model.json"
     },
     "model_version": {
-      "$ref": "global_metadata/model_version.json"
+      "$ref": "global/model_version.json"
     },
     "realm": {
-      "$ref": "global_metadata/realm.json"
+      "$ref": "global/realm.json"
     },
     "run_id": {
-      "$ref": "global_metadata/run_id.json"
+      "$ref": "global/run_id.json"
     }
   }
 }

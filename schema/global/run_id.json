@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "global_metadata/run_id.json",
+  "$id": "global/run_id.json",
   "title": "run_id",
   "description": "Git hash for the commit associated with the experiment run",
   "$comment": "TBC long hash or short hash or either?",

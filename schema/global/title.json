@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "global_metadata/title.json",
+  "$id": "global/title.json",
   "title": "title",
   "description": "Name of the dataset",
   "type": "string"
