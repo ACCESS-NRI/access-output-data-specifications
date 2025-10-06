@@ -2,6 +2,10 @@ name: JSON Schema CI
 
 on: [pull_request, workflow_dispatch]
 
+env:
+  SCHEMA_DIR: schema
+  TEST_DIR: tests
+
 jobs:
   schema-tests:
     runs-on: ubuntu-latest
@@ -12,13 +16,13 @@ jobs:
         uses: sourcemeta/jsonschema@v11.8.3
 
       - name: Check schemas against their metaschemas
-        run: jsonschema metaschema --verbose schema/
+        run: jsonschema metaschema --verbose $SCHEMA_DIR
 
       - name: Check schemas are formatted
-        run: jsonschema fmt --check --verbose schema/
+        run: jsonschema fmt --check --verbose $SCHEMA_DIR
 
       - name: Lint schemas
-        run: jsonschema lint --verbose schema/
+        run: jsonschema lint --verbose $SCHEMA_DIR
 
       - name: Run test suite
-        run: jsonschema test --verbose tests/ --resolve schema
+        run: jsonschema test --verbose $TEST_DIR --resolve $SCHEMA_DIR
