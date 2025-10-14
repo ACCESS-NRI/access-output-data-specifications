@@ -11,6 +11,7 @@ jobs:
   setup:
     name: Setup
     runs-on: ubuntu-latest
+    # Commit step needs write permissions
     permissions:
       contents: write
     steps:
@@ -29,9 +30,6 @@ jobs:
 
       - name: Update README.md
         run: python scripts/update_readme.py
-
-      - name: Cat README.md in lieu of commit
-        run: cat README.md
 
       - name: Commit updated README.md
         uses: EndBug/add-and-commit@v9
