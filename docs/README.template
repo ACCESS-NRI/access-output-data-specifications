@@ -1,2 +1,8 @@
 # ACCESS_Output_data_specifications
 Provide documentation for users and developers that describes model outputs.
+
+## Global Attributes
+{global_attrs_table}
+
+## Variable Attributes
+{variable_attrs_table}
