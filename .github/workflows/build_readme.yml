@@ -26,3 +26,8 @@ jobs:
 
       - name: Cat README.md in lieu of commit
         run: cat README.md
+
+      - name: Commit updated README.md
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: README.md
