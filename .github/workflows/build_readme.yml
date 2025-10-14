@@ -11,6 +11,8 @@ jobs:
   setup:
     name: Setup
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout source
         uses: actions/checkout@v5
@@ -33,7 +35,5 @@ jobs:
 
       - name: Commit updated README.md
         uses: EndBug/add-and-commit@v9
-        permissions:
-          contents: write
         with:
           add: README.md
