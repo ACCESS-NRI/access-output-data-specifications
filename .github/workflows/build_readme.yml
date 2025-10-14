@@ -25,4 +25,4 @@ jobs:
         run: python scripts/update_readme.py
 
       - name: Cat README.md in lieu of commit
-        shell: cat README.md
+        run: cat README.md
