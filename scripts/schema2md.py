@@ -1,4 +1,3 @@
-# Need json_ref_dict, pandas, tabulate
 """
 Builds custom markdown tables for ACCESS-NRI ESM1.6 data spec dcos from the
 schema defined in the ACCESS-NRI schema repo.

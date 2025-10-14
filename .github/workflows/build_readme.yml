@@ -1,0 +1,28 @@
+name: Build README
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_distpatch:
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v5
+
+      - name: Setup python
+        uses: actions/setup-python@v6
+
+      - name: Install dependancies
+        run: python -m pip install -r requirements.txt
+
+      - name: Update README.md
+        run: python scripts/update_readme.py
+
+      - name: Cat README.md in lieu of commit
+        shell: cat README.md
