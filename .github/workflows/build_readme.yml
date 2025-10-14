@@ -14,6 +14,10 @@ jobs:
     steps:
       - name: Checkout source
         uses: actions/checkout@v5
+        # The following is needed to allow add-and-commit below to work
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Setup python
         uses: actions/setup-python@v6
