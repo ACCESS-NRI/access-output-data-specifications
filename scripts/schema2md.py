@@ -34,6 +34,10 @@ def schema2md(schema_url, dot_point_lists=True):
     global_df = pd.DataFrame.from_records(global_attrs).T
     variable_df = pd.DataFrame.from_records(variable_attrs).T
 
+    # Sort dataframe alphabetically by attribute names
+    global_df.sort_values('title', inplace=True, key=lambda col: col.str.lower())
+    variable_df.sort_values('title', inplace=True, key=lambda col: col.str.lower())
+
     # Escape |s in regex patterns
     global_df['pattern'] = global_df['pattern'].str.replace('|', '\\|')
 
