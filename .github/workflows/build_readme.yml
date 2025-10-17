@@ -11,13 +11,15 @@ jobs:
   setup:
     name: Setup
     runs-on: ubuntu-latest
+    envs:
+      python_ver: 3.14.0
     # Commit step needs write permissions
     permissions:
       contents: write
     steps:
       - name: Checkout source
         uses: actions/checkout@v5
-        # The following is needed to allow add-and-commit below to work
+        # The following is needed to allow add-and-commit to know which branch to work on
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.ref }}
