@@ -7,7 +7,7 @@ from json_ref_dict import materialize, RefDict
 import pandas as pd
 
 # Define the columns for the output tables and their formatted names
-GLOBAL_COLS = {'title': 'Title', 'description': 'Description', 'type': 'Type', 'examples': 'Examples', 'rules': 'Rules', '$comment': 'Comment'}
+GLOBAL_COLS = {'title': 'Title', 'description': 'Description', 'type': 'Type', 'examples': 'Examples', 'rules': 'Rules'}
 VARIABLE_COLS = {'title': 'Title', 'description': 'Description', 'type': 'Type', 'examples': 'Examples'}
 
 def schema2md(schema_url, dot_point_lists=True):
