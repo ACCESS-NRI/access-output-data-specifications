@@ -7,7 +7,7 @@ from json_ref_dict import materialize, RefDict
 import pandas as pd
 
 # Define the columns for the output tables and their formatted names
-GLOBAL_COLS = {'title': 'Title', 'description': 'Description', 'type': 'Type', 'examples': 'Examples', 'rules': 'Rules'}
+GLOBAL_COLS = {'title': 'Title', 'description': 'Description', 'type': 'Type', 'examples': 'Examples', 'rules': 'Rules', 'required': 'Required'}
 VARIABLE_COLS = {'title': 'Title', 'description': 'Description', 'type': 'Type', 'examples': 'Examples'}
 
 def schema2md(schema_url, dot_point_lists=True):
@@ -33,6 +33,24 @@ def schema2md(schema_url, dot_point_lists=True):
     # Build pandas tables out of the jsons
     global_df = pd.DataFrame.from_records(global_attrs).T
     variable_df = pd.DataFrame.from_records(variable_attrs).T
+
+    # Add required as a column to both dfs
+    def add_required(df, name):
+        if 'required' in schema['properties'][name]:
+            required = schema['properties'][name]['required']
+        else:
+            required = []
+
+        df = df.assign(required=[row_name in required for row_name in df.index])
+        
+        # Convert True/False to Yes/No
+        df['required'] = df['required'].replace({True: "Yes", False: "No"})
+
+        print(df['required'])
+        return df
+
+    global_df = add_required(global_df, 'global')
+    variable_df = add_required(variable_df, 'variables')
 
     # Sort dataframe alphabetically by attribute names
     global_df.sort_values('title', inplace=True, key=lambda col: col.str.lower())
