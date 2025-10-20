@@ -2,13 +2,27 @@
 Builds custom markdown tables for ACCESS-NRI ESM1.6 data spec dcos from the
 schema defined in the ACCESS-NRI schema repo.
 """
+
 import json
 from json_ref_dict import materialize, RefDict
 import pandas as pd
 
 # Define the columns for the output tables and their formatted names
-GLOBAL_COLS = {'title': 'Title', 'description': 'Description', 'type': 'Type', 'examples': 'Examples', 'rules': 'Rules', 'required': 'Required'}
-VARIABLE_COLS = {'title': 'Title', 'description': 'Description', 'type': 'Type', 'examples': 'Examples'}
+GLOBAL_COLS = {
+    "title": "Title",
+    "description": "Description",
+    "type": "Type",
+    "examples": "Examples",
+    "rules": "Rules",
+    "required": "Required",
+}
+VARIABLE_COLS = {
+    "title": "Title",
+    "description": "Description",
+    "type": "Type",
+    "examples": "Examples",
+}
+
 
 def schema2md(schema_url, dot_point_lists=True):
     """
@@ -27,8 +41,10 @@ def schema2md(schema_url, dot_point_lists=True):
     schema = materialize(RefDict(schema_url))
 
     # Get the global and variable attributes
-    global_attrs = schema['properties']['global']['properties']
-    variable_attrs = schema['properties']['variables']['patternProperties']['^.+$']['properties']
+    global_attrs = schema["properties"]["global"]["properties"]
+    variable_attrs = schema["properties"]["variables"]["patternProperties"]["^.+$"][
+        "properties"
+    ]
 
     # Build pandas tables out of the jsons
     global_df = pd.DataFrame.from_records(global_attrs).T
@@ -36,31 +52,33 @@ def schema2md(schema_url, dot_point_lists=True):
 
     # Add required as a column to both dfs
     def add_required(df, name):
-        if 'required' in schema['properties'][name]:
-            required = schema['properties'][name]['required']
+        if "required" in schema["properties"][name]:
+            required = schema["properties"][name]["required"]
         else:
             required = []
 
         df = df.assign(required=[row_name in required for row_name in df.index])
-        
-        # Convert True/False to Yes/No
-        df['required'] = df['required'].replace({True: "Yes", False: "No"})
 
-        print(df['required'])
+        # Convert True/False to Yes/No
+        df["required"] = df["required"].replace({True: "Yes", False: "No"})
+
+        print(df["required"])
         return df
 
-    global_df = add_required(global_df, 'global')
-    variable_df = add_required(variable_df, 'variables')
+    global_df = add_required(global_df, "global")
+    variable_df = add_required(variable_df, "variables")
 
     # Sort dataframe alphabetically by attribute names
-    global_df.sort_values('title', inplace=True, key=lambda col: col.str.lower())
-    variable_df.sort_values('title', inplace=True, key=lambda col: col.str.lower())
+    global_df.sort_values("title", inplace=True, key=lambda col: col.str.lower())
+    variable_df.sort_values("title", inplace=True, key=lambda col: col.str.lower())
 
     # Escape |s in regex patterns
-    global_df['pattern'] = global_df['pattern'].str.replace('|', '\\|')
+    global_df["pattern"] = global_df["pattern"].str.replace("|", "\\|")
 
     # oneOf is a list of dicts {pattern: regex}, convert to a list of strings
-    global_df['oneOf'] = global_df['oneOf'].apply(lambda x: [xi['pattern'] for xi in x] if isinstance(x, list) else x)
+    global_df["oneOf"] = global_df["oneOf"].apply(
+        lambda x: [xi["pattern"] for xi in x] if isinstance(x, list) else x
+    )
 
     # Certain columns are lists, convert them to strings
     dot_point_lists = True
@@ -69,7 +87,7 @@ def schema2md(schema_url, dot_point_lists=True):
             # dtype for list columns is object so we need to go grab one to check
             col = df[col_name].dropna()
             contents = col.iloc[0]
-            
+
             if isinstance(contents, list):
                 if dot_point_lists:
                     join_str = "</li><li>"
@@ -84,33 +102,45 @@ def schema2md(schema_url, dot_point_lists=True):
                     if isinstance(l, list):
                         if len(l) > 1:
                             # Turn multi-item lists into dot point lists
-                            return start_str + join_str.join([str(li) for li in l]) + end_str
+                            return (
+                                start_str
+                                + join_str.join([str(li) for li in l])
+                                + end_str
+                            )
                         elif len(l) == 1:
                             # Turn single items into just that item
                             return l[0]
                         else:
                             # Empty string for empty lists
                             return ""
-                        
+
                     # Otherwise just return the item as is
                     return l
 
                 df[col_name] = df[col_name].apply(list2str)
 
     # Prefix these columns with some explanatory text first
-    prefix_d = {"pattern": "Must match regex: ", "oneOf": "Must match one of these regex: ", "enum": "Must be one of the following: "}
+    prefix_d = {
+        "pattern": "Must match regex: ",
+        "oneOf": "Must match one of these regex: ",
+        "enum": "Must be one of the following: ",
+    }
 
     for key, prefix in prefix_d.items():
-        global_df[key] = global_df[key].apply(lambda x: prefix + x if isinstance(x, str) else x)
+        global_df[key] = global_df[key].apply(
+            lambda x: prefix + x if isinstance(x, str) else x
+        )
 
     # Unify the pattern, oneOf, and enum columns
-    global_df['rules'] = global_df['pattern'].fillna(global_df['oneOf']).fillna(global_df['enum'])
+    global_df["rules"] = (
+        global_df["pattern"].fillna(global_df["oneOf"]).fillna(global_df["enum"])
+    )
 
     # Replace nans with empty strings
     global_df = global_df.fillna("")
     variable_df = variable_df.fillna("")
 
-    # Filter and rename output columns    
+    # Filter and rename output columns
     global_final_df = global_df[GLOBAL_COLS.keys()].rename(columns=GLOBAL_COLS)
     variable_final_df = variable_df[VARIABLE_COLS.keys()].rename(columns=VARIABLE_COLS)
 
