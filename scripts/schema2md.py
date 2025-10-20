@@ -62,8 +62,18 @@ def schema2md(schema_url, dot_point_lists=True):
                     start_str = ""
                     end_str = ""
 
-                f = lambda l: start_str + join_str.join([str(li) for li in l]) + end_str if isinstance(l, list) else l
-                df[col_name] = df[col_name].apply(f)
+                def list2str(l):
+                        if len(l) > 1:
+                            # Turn multi-item lists into dot point lists
+                            return start_str + join_str.join([str(li) for li in l]) + end_str
+                        elif len(l) == 1:
+                            # Turn single items into just that item
+                            return l[0]
+                        else:
+                            # Empty string for empty list
+                            return ""
+
+                df[col_name] = df[col_name].apply(list2str)
 
     # Prefix these columns with some explanatory text first
     prefix_d = {"pattern": "Must match regex: ", "oneOf": "Must match one of these regex: ", "enum": "Must be one of the following: "}
