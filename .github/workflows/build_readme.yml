@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  setup:
-    name: Setup
+  build-readme:
+    name: build-readme
     runs-on: ubuntu-latest
     # Commit step needs write permissions
     permissions:
