@@ -70,9 +70,12 @@ def schema2md(schema_url, dot_point_lists=True):
                         elif len(l) == 1:
                             # Turn single items into just that item
                             return l[0]
+                        else:
+                            # Empty string for empty lists
+                            return ""
                         
-                    # Empty string for empty lists or nans
-                    return ""
+                    # Otherwise just return the item as is
+                    return l
 
                 df[col_name] = df[col_name].apply(list2str)
 
