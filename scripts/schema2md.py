@@ -63,15 +63,16 @@ def schema2md(schema_url, dot_point_lists=True):
                     end_str = ""
 
                 def list2str(l):
+                    if isinstance(l, list):
                         if len(l) > 1:
                             # Turn multi-item lists into dot point lists
                             return start_str + join_str.join([str(li) for li in l]) + end_str
                         elif len(l) == 1:
                             # Turn single items into just that item
                             return l[0]
-                        else:
-                            # Empty string for empty list
-                            return ""
+                        
+                    # Empty string for empty lists or nans
+                    return ""
 
                 df[col_name] = df[col_name].apply(list2str)
 
