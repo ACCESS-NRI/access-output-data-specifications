@@ -62,7 +62,6 @@ def schema2md(schema_url, dot_point_lists=True):
         # Convert True/False to Yes/No
         df["required"] = df["required"].replace({True: "Yes", False: "No"})
 
-        print(df["required"])
         return df
 
     global_df = add_required(global_df, "global")
