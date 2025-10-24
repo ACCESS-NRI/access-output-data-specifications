@@ -11,7 +11,6 @@ import pandas as pd
 GLOBAL_COLS = {
     "title": "Title",
     "description": "Description",
-    "type": "Type",
     "examples": "Examples",
     "rules": "Rules",
     "required": "Required",
