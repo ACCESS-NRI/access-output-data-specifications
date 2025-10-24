@@ -1,7 +1,46 @@
-# ACCESS_Output_data_specifications
-Provide documentation for users and developers that describes model outputs.
+# ACCESS Output Data Specifications
+This document provides an overview of the data specifications for data produced
+by ACCESS models.
+The initial draft of this specification targets ESM1.6 and will be expanded to other ACCESS models in time.
+This version of the specification is intended to be relatively lightweight as a first step towards bringing data
+produced in the ACCESS ecosystem towards a common data and metadata standard.
+
+Included here are file and directory naming conventions, variable conventions, and variable and global attributes.
+Soon to come are variable mappings from ACCESS to CMIP6/7.
+
+More information on the ACCESS models can be found [here](https://www.access-nri.org.au/models/).
+Please direct any issues, feedback or queries on the data specification to <data.access.nri@anu.edu.au>.
+
+# Directory and Filename
+**TODO: Confirm the following is correct.**
+## Directory Structure
+ACCESS-ESM1.6 data output has the following struction under the current working directory:
+
+`<run>/output<xxx>/<realm>/<filename.nc>`
+
+## File naming
+ACCESS-ESM1.6 files will follow the following naming convention:
+- Atmosphere (UMxoutput): TBC
+- Ocean (MOM5 ouutput): TBC
+- Sea-ice (CICEx output): TBC
+
+All information contained in filenames is present in file metadata attribute however it is best to avoid renaming files.
+
+# File content
+All output files will be NetCDF4 files.
+Files should be created using the NetCDF4 classic data model and data variables should be compressed using `zlib` with deflate level 1 and shuffle enabled.
+Files should conform to the CF metadata conventions (version 1.11) and where possible should use the CF Convention Stanard Name Table where possible.
+
+For ACCESS-ESM1.6 every file will contain a single data variable/field from a single simulation.
+
+# Metadata Attributes
 
 ## Global Attributes
+Global attributes provide information on the context for the data such as the creation time, experiment it is part of, or science configurations used.
+All the attributes in the table below are recommended but not all are required as detailed in the `Required` column.
+All these global attributes have type `string`.
+Attributes not specified in the following table are permitted.
+
 | Title                  | Description                                                                                                                                                         | Type   | Examples                                                     | Rules                                                                                                                                                                                            | Required   |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
 | base_configuration     | Configuration modified for experiment, see configs repo: https://github.com/ACCESS-NRI/access-esm1.6-configs                                                        | string | release-preindustrial+concentrations-2.0                     |                                                                                                                                                                                                  | Yes        |
@@ -26,6 +65,9 @@ Provide documentation for users and developers that describes model outputs.
 | variable_id            | A list of short variable names, separated by commas, for the data variable/s that appear in this file. These names should match the netCDF variable names.          | string | <ul><li>huss</li><li>uas,vas</li></ul>                       |                                                                                                                                                                                                  | No         |
 
 ## Variable Attributes
+Variable attributes provide information on the data variable such as the units used, standard_name, or cell_methods used to generate the data.
+In netCDF files there can be multiple coordinate variables such as `time`, `latitude`, and `time_bnds` and the main output field variable of which there should be only one.
+Where possible variables and their attributes should follow CF-v1.11 conventions.
 | Title         | Description                                                                                                                                                                  | Type   | Examples                                                                                                                           |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|------------------------------------------------------------------------------------------------------------------------------------|
 | _FillValue    | Value assigned to portions of the variable fields that are "missing".                                                                                                        | number | <ul><li>-2147483647</li><li>-9999</li></ul>                                                                                        |
@@ -33,3 +75,9 @@ Provide documentation for users and developers that describes model outputs.
 | long_name     | A long descriptive name which may, for example, be used for labeling plots.                                                                                                  | string | <ul><li>Near-Surface Air Temperature</li><li>latitude</li><li>Potential Evapotranspiration</li></ul>                               |
 | standard_name | Where posisble use the CF standard_name of the variable, otherwise use a unique short phrase separated by underscores to describe the variable.                              | string | <ul><li>air_pressure_at_sea_level</li><li>latitude</li><li>water_potential_evaporation_flux</li></ul>                              |
 | units         | The units of measurement for the variable                                                                                                                                    | string | <ul><li>K</li><li>m-2 s-1</li></ul>                                                                                                |
+
+## Acknowledgements
+We would like to acknowlege the specifications and conventions we have used and consulted to construct this specification and the tremendous work of their authors:
+- [CMIP6](https://pcmdi.llnl.gov/CMIP6/Guide/dataUsers.html)
+- [CORDEX](https://cordex.org/2024/04/12/the-cordex-cmip6-archiving-specifications-for-dynamical-downscaling-now-published/)
+- [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3)
