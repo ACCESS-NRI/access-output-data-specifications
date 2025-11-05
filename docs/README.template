@@ -20,11 +20,11 @@ ACCESS-ESM1.6 data output has the following struction under the current working 
 
 ## File naming
 ACCESS-ESM1.6 files will follow the following naming convention:
-- Atmosphere (UMxoutput): TBC
-- Ocean (MOM5 ouutput): TBC
+- Atmosphere (UMx output): TBC
+- Ocean (MOM5 output): TBC
 - Sea-ice (CICEx output): TBC
 
-All information contained in filenames is present in file metadata attribute however it is best to avoid renaming files.
+All information contained in filenames should be present in file metadata attribute however it is best to avoid renaming files.
 
 # File content
 All output files will be NetCDF4 files.
