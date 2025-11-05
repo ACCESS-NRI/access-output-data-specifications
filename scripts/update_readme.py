@@ -10,8 +10,7 @@ with open("docs/README.template", "r") as f:
     readme_template = f.read()
 
 # Open the global and variable tables
-# TODO: This URL should not be pointed at a branch once workflows are closer to finished
-SCHEMA_URL = "https://raw.githubusercontent.com/ACCESS-NRI/schema/refs/heads/esm16-output-file-schema/au.org.access-nri/model/output/file-metadata/2-0-0/2-0-0.json"
+SCHEMA_URL = "https://raw.githubusercontent.com/ACCESS-NRI/schema/refs/heads/main/au.org.access-nri/model/output/file-metadata/2-0-0/2-0-0.json"
 global_table, variable_table = schema2md(SCHEMA_URL)
 d = {
     "global_attrs_table": global_table,
