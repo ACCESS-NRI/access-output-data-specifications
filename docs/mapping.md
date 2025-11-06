@@ -1,4 +1,4 @@
-# ESM 1.6 Output Variable Mapping
+# ACCESS ESM 1.6 Output Variable Mapping
 
 Mapping of ESM1.6 variables to [CMIP6](https://airtable.com/appcPYagzahjnnu2E/shrZpx0VItHJ24vuy/tblpo5L8maBIGlM1B/viwNNzrqK5oPL7zk2) and [CMIP7](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables).
 
@@ -37,6 +37,19 @@ Mapping of ESM1.6 variables to [CMIP6](https://airtable.com/appcPYagzahjnnu2E/sh
             <td>K</td>
             <td>K = (F − 32) × 5 ⁄ 9 + 273.15</td>
             <td>Farenheit is silly but demonstrates mapping</td>
+        </tr>
+        <tr>
+            <td>fld_s02i261</td>
+            <td>%</td>
+            <td>cloud_area_fraction_in_atmosphere_layer</td>
+            <td>%</td>
+            <td>Amon.cl</td>
+            <td>%</td>
+            <td>1</td>
+            <td>atmos.cl.tavg-al-hxy-u.mon.GLB</td>
+            <td>%</td>
+            <td>1</td>
+            <td></td>
         </tr>
     </tbody>
 </table>
