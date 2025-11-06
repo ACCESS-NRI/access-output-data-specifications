@@ -1,4 +1,6 @@
-# ESM 1.6 Output Variables
+# ESM 1.6 Output Variable Mapping
+
+Mapping of ESM1.6 variables to [CMIP6](https://airtable.com/appcPYagzahjnnu2E/shrZpx0VItHJ24vuy/tblpo5L8maBIGlM1B/viwNNzrqK5oPL7zk2) and [CMIP7](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables).
 
 <table>
     <thead>
@@ -12,12 +14,12 @@
         <tr>
             <th>Name</th>
             <th>Units</th>
-            <th>Compound Name</th>
+            <th>Standard Name</th>
             <th>Units</th>
             <th>Compound Name</th>
             <th>Units</th>
             <th>Mapping</th>
-            <th>Standard Name</th>
+            <th>Compound Name</th>
             <th>Units</th>
             <th>Mapping</th>
         </tr>
