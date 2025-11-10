@@ -1,0 +1,190 @@
+# ACCESS ESM 1.6 Output Variable Mapping
+
+Mapping of ESM1.6 variables to [CMIP6](https://airtable.com/appcPYagzahjnnu2E/shrZpx0VItHJ24vuy/tblpo5L8maBIGlM1B/viwNNzrqK5oPL7zk2) and [CMIP7](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables).
+
+<table>
+    <thead>
+        <tr>
+            <th colspan=2>ESM1.6</th>
+            <th colspan=2>CF</th>
+            <th colspan=3>CMIP6</th>
+            <th colspan=3>CMIP7</th>
+            <th rowspan=2>Notes</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Units</th>
+            <th>Standard Name</th>
+            <th>Units</th>
+            <th>Compound Name</th>
+            <th>Units</th>
+            <th>Mapping</th>
+            <th>Compound Name</th>
+            <th>Units</th>
+            <th>Mapping</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>fld_s00i024</td>
+            <td>F</td>
+            <td>surface_temperature</td>
+            <td>K</td>
+            <td>Amon.ts</td>
+            <td>K</td>
+            <td>K = (F − 32) × 5 ⁄ 9 + 273.15</td>
+            <td>atmos.ts.tavg-u-hxy-u.mon.GLB</td>
+            <td>K</td>
+            <td>K = (F − 32) × 5 ⁄ 9 + 273.15</td>
+            <td>Farenheit is silly but demonstrates mapping</td>
+        </tr>
+        <tr>
+            <td>fld_s02i261</td>
+            <td>%</td>
+            <td>cloud_area_fraction_in_atmosphere_layer</td>
+            <td>%</td>
+            <td>Amon.cl</td>
+            <td>%</td>
+            <td>1</td>
+            <td>atmos.cl.tavg-al-hxy-u.mon.GLB</td>
+            <td>%</td>
+            <td>1</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+## WIP Mapping Table
+| CF Standard Name                                             | Units      | Frequency   | ESM1.5 Name                                                              | CMIP6 Compound Name   | CMIP7 Compound Name                      |
+|--------------------------------------------------------------|------------|-------------|--------------------------------------------------------------------------|-----------------------|------------------------------------------|
+| cell_area                                                    | m2         | fx          | fld_s02i204                                                              | fx.areacella          | atmos.areacella.ti-u-hxy-u.fx.GLB        |
+| cloud_area_fraction_in_atmosphere_layer                      | %          | mon         | fld_s02i261                                                              | Amon.cl               | atmos.cl.tavg-al-hxy-u.mon.GLB           |
+| mass_fraction_of_cloud_ice_in_air                            | kg kg-1    | mon         | fld_s02i309                                                              | Amon.cli              | atmos.cli.tavg-al-hxy-u.mon.GLB          |
+| atmosphere_mass_content_of_cloud_ice                         | kg m-2     | mon         | fld_s30i406                                                              | Amon.clivi            | atmos.clivi.tavg-u-hxy-u.mon.GLB         |
+| cloud_area_fraction                                          | %          | day         | fld_s02i204                                                              | day.clt               | atmos.clt.tavg-u-hxy-u.day.GLB           |
+| cloud_area_fraction                                          | %          | mon         | fld_s02i204                                                              | Amon.clt              | atmos.clt.tavg-u-hxy-u.mon.GLB           |
+| mass_fraction_of_cloud_liquid_water_in_air                   | kg kg-1    | mon         | fld_s02i308                                                              | Amon.clw              | atmos.clw.tavg-al-hxy-u.mon.GLB          |
+| atmosphere_mass_content_of_cloud_condensed_water             | kg m-2     | mon         | unknown                                                                  | Amon.clwvi            | atmos.clwvi.tavg-u-hxy-u.mon.GLB         |
+| water_evapotranspiration_flux                                | kg m-2 s-1 | mon         | fld_s03i223                                                              | Amon.evspsbl          | atmos.evspsbl.tavg-u-hxy-u.mon.GLB       |
+| surface_upward_latent_heat_flux                              | W m-2      | mon         | fld_s03i234                                                              | Amon.hfls             | atmos.hfls.tavg-u-hxy-u.mon.GLB          |
+| surface_upward_sensible_heat_flux                            | W m-2      | mon         | fld_s03i217                                                              | Amon.hfss             | atmos.hfss.tavg-u-hxy-u.mon.GLB          |
+| relative_humidity                                            | %          | mon         | fld_s30i206                                                              | Amon.hur              | atmos.hur.tavg-p19-hxy-air.mon.GLB       |
+| relative_humidity                                            | %          | day         | fld_s30i206                                                              | day.hur               | atmos.hur.tavg-p19-hxy-u.day.GLB         |
+| relative_humidity                                            | %          | 6hr         | fld_s03i245                                                              | 6hrPlev.hurs          | atmos.hurs.tavg-h2m-hxy-u.6hr.GLB        |
+| relative_humidity                                            | %          | day         | fld_s03i245                                                              | day.hurs              | atmos.hurs.tavg-h2m-hxy-u.day.GLB        |
+| relative_humidity                                            | %          | mon         | fld_s03i245                                                              | Amon.hurs             | atmos.hurs.tavg-h2m-hxy-u.mon.GLB        |
+| specific_humidity                                            | 1          | day         | fld_s30i205                                                              | day.hus               | atmos.hus.tavg-p19-hxy-u.day.GLB         |
+| specific_humidity                                            | 1          | mon         | fld_s30i205                                                              | Amon.hus              | atmos.hus.tavg-p19-hxy-u.mon.GLB         |
+| specific_humidity                                            | 1          | day         | fld_s03i237                                                              | day.huss              | atmos.huss.tavg-h2m-hxy-u.day.GLB        |
+| specific_humidity                                            | 1          | mon         | fld_s03i237                                                              | Amon.huss             | atmos.huss.tavg-h2m-hxy-u.mon.GLB        |
+| specific_humidity                                            | 1          | 3hr         | fld_s03i237                                                              | 3hr.huss              | atmos.huss.tpt-h2m-hxy-u.3hr.GLB         |
+| precipitation_flux                                           | kg m-2 s-1 | 1hr         | fld_s05i216                                                              | E1hr.pr               | atmos.pr.tavg-u-hxy-u.1hr.GLB            |
+| precipitation_flux                                           | kg m-2 s-1 | 3hr         | fld_s05i216                                                              | 3hr.pr                | atmos.pr.tavg-u-hxy-u.3hr.GLB            |
+| precipitation_flux                                           | kg m-2 s-1 | day         | fld_s05i216                                                              | day.pr                | atmos.pr.tavg-u-hxy-u.day.GLB            |
+| precipitation_flux                                           | kg m-2 s-1 | mon         | fld_s05i216                                                              | Amon.pr               | atmos.pr.tavg-u-hxy-u.mon.GLB            |
+| convective_precipitation_flux                                | kg m-2 s-1 | mon         | fld_s05i205, fld_s05i206                                                 | Amon.prc              | atmos.prc.tavg-u-hxy-u.mon.GLB           |
+| snowfall_flux                                                | kg m-2 s-1 | mon         | fld_s05i215                                                              | Amon.prsn             | atmos.prsn.tavg-u-hxy-u.mon.GLB          |
+| atmosphere_mass_content_of_water_vapor                       | kg m-2     | mon         | fld_s30i404, fld_s30i403, fld_s30i405, fld_s30i406                       | Amon.prw              | atmos.prw.tavg-u-hxy-u.mon.GLB           |
+| surface_air_pressure                                         | Pa         | day         | fld_s00i409                                                              | CFday.ps              | atmos.ps.tavg-u-hxy-u.day.GLB            |
+| surface_air_pressure                                         | Pa         | mon         | fld_s00i409                                                              | Amon.ps               | atmos.ps.tavg-u-hxy-u.mon.GLB            |
+| air_pressure_at_mean_sea_level                               | Pa         | day         | fld_s16i222                                                              | day.psl               | atmos.psl.tavg-u-hxy-u.day.GLB           |
+| air_pressure_at_mean_sea_level                               | Pa         | mon         | fld_s16i222                                                              | Amon.psl              | atmos.psl.tavg-u-hxy-u.mon.GLB           |
+| surface_downwelling_longwave_flux_in_air                     | W m-2      | mon         | fld_s02i207                                                              | Amon.rlds             | atmos.rlds.tavg-u-hxy-u.mon.GLB          |
+| surface_downwelling_longwave_flux_in_air_assuming_clear_sky  | W m-2      | mon         | fld_s02i208                                                              | Amon.rldscs           | atmos.rldscs.tavg-u-hxy-u.mon.GLB        |
+| surface_upwelling_longwave_flux_in_air                       | W m-2      | mon         | fld_s02i207, fld_s02i201, fld_s03i332, fld_s02i205                       | Amon.rlus             | atmos.rlus.tavg-u-hxy-u.mon.GLB          |
+| surface_upwelling_longwave_flux_assuming_clear_sky           | W m-2      | mon         | fld_s02i206                                                              | Amon.rluscs           | atmos.rluscs.tavg-u-hxy-u.mon.GLB        |
+| toa_outgoing_longwave_flux                                   | W m-2      | mon         | fld_s03i332                                                              | Amon.rlut             | atmos.rlut.tavg-u-hxy-u.mon.GLB          |
+| toa_outgoing_longwave_flux_assuming_clear_sky                | W m-2      | mon         | fld_s02i206                                                              | Amon.rlutcs           | atmos.rlutcs.tavg-u-hxy-u.mon.GLB        |
+| surface_downwelling_shortwave_flux_in_air                    | W m-2      | day         | fld_s01i235                                                              | day.rsds              | atmos.rsds.tavg-u-hxy-u.day.GLB          |
+| surface_downwelling_shortwave_flux_in_air                    | W m-2      | mon         | fld_s01i235                                                              | Amon.rsds             | atmos.rsds.tavg-u-hxy-u.mon.GLB          |
+| surface_downwelling_shortwave_flux_in_air_assuming_clear_sky | W m-2      | mon         | fld_s01i210                                                              | Amon.rsdscs           | atmos.rsdscs.tavg-u-hxy-u.mon.GLB        |
+| toa_incoming_shortwave_flux                                  | W m-2      | mon         | fld_s01i207                                                              | Amon.rsdt             | atmos.rsdt.tavg-u-hxy-u.mon.GLB          |
+| surface_upwelling_shortwave_flux_in_air                      | W m-2      | mon         | fld_s01i235, fld_s01i201                                                 | Amon.rsus             | atmos.rsus.tavg-u-hxy-u.mon.GLB          |
+| surface_upwelling_shortwave_flux_in_air_assuming_clear_sky   | W m-2      | mon         | fld_s01i211                                                              | Amon.rsuscs           | atmos.rsuscs.tavg-u-hxy-u.mon.GLB        |
+| toa_outgoing_shortwave_flux                                  | W m-2      | mon         | fld_s01i208                                                              | Amon.rsut             | atmos.rsut.tavg-u-hxy-u.mon.GLB          |
+| toa_outgoing_shortwave_flux_assuming_clear_sky               | W m-2      | mon         | fld_s01i209                                                              | Amon.rsutcs           | atmos.rsutcs.tavg-u-hxy-u.mon.GLB        |
+| wind_speed                                                   | m s-1      | day         | fld_s03i230                                                              | day.sfcWind           | atmos.sfcWind.tavg-h10m-hxy-u.day.GLB    |
+| wind_speed                                                   | m s-1      | mon         | fld_s03i230                                                              | Amon.sfcWind          | atmos.sfcWind.tavg-h10m-hxy-u.mon.GLB    |
+| land_area_fraction                                           | %          | fx          | fld_s03i395                                                              | fx.sftlf              | atmos.sftlf.ti-u-hxy-u.fx.GLB            |
+| air_temperature                                              | K          | day         | fld_s30i204                                                              | day.ta                | atmos.ta.tavg-p19-hxy-air.day.GLB        |
+| air_temperature                                              | K          | mon         | fld_s30i204                                                              | Amon.ta               | atmos.ta.tavg-p19-hxy-air.mon.GLB        |
+| air_temperature                                              | K          | 6hr         | fld_s30i204                                                              | 6hrPlevPt.ta          | atmos.ta.tpt-p3-hxy-air.6hr.GLB          |
+| air_temperature                                              | K          | day         | fld_s03i236                                                              | day.tas               | atmos.tas.tavg-h2m-hxy-u.day.GLB         |
+| air_temperature                                              | K          | mon         | fld_s03i236                                                              | Amon.tas              | atmos.tas.tavg-h2m-hxy-u.mon.GLB         |
+| air_temperature                                              | K          | day         | fld_s03i236_max                                                          | day.tasmax            | atmos.tas.tmax-h2m-hxy-u.day.GLB         |
+| air_temperature                                              | K          | mon         | fld_s03i236_max                                                          | Amon.tasmax           | atmos.tas.tmaxavg-h2m-hxy-u.mon.GLB      |
+| air_temperature                                              | K          | day         | fld_s03i236_min                                                          | day.tasmin            | atmos.tas.tmin-h2m-hxy-u.day.GLB         |
+| air_temperature                                              | K          | mon         | fld_s03i236_min                                                          | Amon.tasmin           | atmos.tas.tminavg-h2m-hxy-u.mon.GLB      |
+| air_temperature                                              | K          | 3hr         | fld_s03i236                                                              | 3hr.tas               | atmos.tas.tpt-h2m-hxy-u.3hr.GLB          |
+| surface_downward_eastward_stress                             | Pa         | mon         | fld_s03i460                                                              | Amon.tauu             | atmos.tauu.tavg-u-hxy-u.mon.GLB          |
+| surface_downward_northward_stress                            | Pa         | mon         | fld_s03i461                                                              | Amon.tauv             | atmos.tauv.tavg-u-hxy-u.mon.GLB          |
+| surface_temperature                                          | K          | mon         | fld_s00i024                                                              | Amon.ts               | atmos.ts.tavg-u-hxy-u.mon.GLB            |
+| eastward_wind                                                | m s-1      | day         | fld_s30i201                                                              | day.ua                | atmos.ua.tavg-p19-hxy-air.day.GLB        |
+| eastward_wind                                                | m s-1      | mon         | fld_s30i201                                                              | Amon.ua               | atmos.ua.tavg-p19-hxy-air.mon.GLB        |
+| eastward_wind                                                | m s-1      | 6hr         | fld_s30i201                                                              | 6hrPlevPt.ua          | atmos.ua.tpt-p3-hxy-air.6hr.GLB          |
+| eastward_wind                                                | m s-1      | day         | fld_s03i209                                                              | day.uas               | atmos.uas.tavg-h10m-hxy-u.day.GLB        |
+| eastward_wind                                                | m s-1      | mon         | fld_s03i209                                                              | Amon.uas              | atmos.uas.tavg-h10m-hxy-u.mon.GLB        |
+| eastward_wind                                                | m s-1      | 3hr         | fld_s03i209                                                              | 3hrPt.uas             | atmos.uas.tpt-h10m-hxy-u.3hr.GLB         |
+| northward_wind                                               | m s-1      | day         | fld_s30i202                                                              | day.va                | atmos.va.tavg-p19-hxy-air.day.GLB        |
+| northward_wind                                               | m s-1      | mon         | fld_s30i202                                                              | Amon.va               | atmos.va.tavg-p19-hxy-air.mon.GLB        |
+| northward_wind                                               | m s-1      | 6hr         | fld_s30i202                                                              | 6hrPlevPt.va          | atmos.va.tpt-p3-hxy-air.6hr.GLB          |
+| northward_wind                                               | m s-1      | day         | fld_s03i210                                                              | day.vas               | atmos.vas.tavg-h10m-hxy-u.day.GLB        |
+| northward_wind                                               | m s-1      | mon         | fld_s03i210                                                              | Amon.vas              | atmos.vas.tavg-h10m-hxy-u.mon.GLB        |
+| northward_wind                                               | m s-1      | 3hr         | fld_s03i210                                                              | 3hrPt.vas             | atmos.vas.tpt-h10m-hxy-u.3hr.GLB         |
+| lagrangian_tendency_of_air_pressure                          | Pa s-1     | mon         | fld_s30i208                                                              | Amon.wap              | atmos.wap.tavg-p19-hxy-air.mon.GLB       |
+| lagrangian_tendency_of_air_pressure                          | Pa s-1     | day         | fld_s30i208                                                              | day.wap               | atmos.wap.tavg-p19-hxy-u.day.GLB         |
+| geopotential_height                                          | m          | day         | fld_s30i207                                                              | day.zg                | atmos.zg.tavg-p19-hxy-air.day.GLB        |
+| geopotential_height                                          | m          | mon         | fld_s30i207                                                              | Amon.zg               | atmos.zg.tavg-p19-hxy-air.mon.GLB        |
+| water_evaporation_flux_from_soil                             | kg m-2 s-1 | mon         | fld_s03i296                                                              | Lmon.evspsblsoi       | land.evspsblsoi.tavg-u-hxy-lnd.mon.GLB   |
+| water_evaporation_flux_from_canopy                           | kg m-2 s-1 | mon         | fld_s03i297                                                              | Lmon.evspsblveg       | land.evspsblveg.tavg-u-hxy-lnd.mon.GLB   |
+| leaf_area_index                                              | 1          | mon         | fld_s03i893, fld_s03i317, fld_s03i395                                    | Lmon.lai              | land.lai.tavg-u-hxy-lnd.mon.GLB          |
+| runoff_flux                                                  | kg m-2 s-1 | mon         | fld_s08i234, fld_s08i235                                                 | Lmon.mrro             | land.mrro.tavg-u-hxy-lnd.mon.GLB         |
+| surface_runoff_flux                                          | kg m-2 s-1 | mon         | fld_s08i234                                                              | Lmon.mrros            | land.mrros.tavg-u-hxy-lnd.mon.GLB        |
+| mass_content_of_water_in_soil                                | kg m-2     | mon         | fld_s08i223                                                              | Lmon.mrso             | land.mrso.tavg-u-hxy-lnd.mon.GLB         |
+| soil_moisture_content_at_field_capacity                      | kg m-2     | fx          | unknown                                                                  | fx.mrsofc             | land.mrsofc.ti-u-hxy-lnd.fx.GLB          |
+| mass_content_of_water_in_soil_layer                          | kg m-2     | mon         | fld_s08i223                                                              | Lmon.mrsos            | land.mrsol.tavg-d10cm-hxy-lnd.mon.GLB    |
+| surface_altitude                                             | m          | fx          | unknown                                                                  | fx.orog               | land.orog.ti-u-hxy-u.fx.GLB              |
+| root_depth                                                   | m          | fx          | unknown                                                                  | fx.rootd              | land.rootd.ti-u-hxy-lnd.fx.GLB           |
+| land_ice_area_fraction                                       | %          | fx          | unknown                                                                  | fx.sftgif             | land.sftgif.ti-u-hxy-u.fx.GLB            |
+| cell_thickness                                               | m          | fx          | unknown                                                                  | Efx.slthick           | land.slthick.ti-sl-hxy-lnd.fx.GLB        |
+| soil_frozen_water_content                                    | kg m-2     | mon         | fld_s08i223, fld_s08i230, depth                                          | Lmon.mrfso            | landIce.mrfso.tavg-u-hxy-lnd.mon.GLB     |
+| surface_snow_area_fraction                                   | %          | mon         | unknown                                                                  | LImon.snc             | landIce.snc.tavg-u-hxy-lnd.mon.GLB       |
+| surface_snow_amount                                          | kg m-2     | mon         | unknown                                                                  | LImon.snw             | landIce.snw.tavg-u-hxy-lnd.mon.GLB       |
+| cell_area                                                    | m2         | fx          | unknown                                                                  | Ofx.areacello         | ocean.areacello.ti-u-hxy-u.fx.GLB        |
+| region                                                       | 1          | fx          | unknown                                                                  | Ofx.basin             | ocean.basin.ti-u-hxy-u.fx.GLB            |
+| sea_water_conservative_temperature                           | degC       | mon         | temp                                                                     | Omon.bigthetao        | ocean.bigthetao.tavg-ol-hxy-sea.mon.GLB  |
+| sea_floor_depth_below_geoid                                  | m          | fx          | unknown                                                                  | Ofx.deptho            | ocean.deptho.ti-u-hxy-sea.fx.GLB         |
+| surface_downward_heat_flux_in_sea_water                      | W m-2      | mon         | sfc_hflux_from_runoff, sfc_hflux_coupler, sfc_hflux_pme, frazil_3d_int_z | Omon.hfds             | ocean.hfds.tavg-u-hxy-sea.mon.GLB        |
+| upward_geothermal_heat_flux_at_sea_floor                     | W m-2      | fx          | unknown                                                                  | Ofx.hfgeou            | ocean.hfgeou.ti-u-hxy-sea.fx.GLB         |
+| sea_water_mass_per_unit_area                                 | kg m-2     | mon         | rho_dzt                                                                  | Omon.masscello        | ocean.masscello.tavg-ol-hxy-sea.mon.GLB  |
+| sea_water_mass_per_unit_area                                 | kg m-2     | fx          | rho_dzt                                                                  | Ofx.masscello         | ocean.masscello.ti-ol-hxy-sea.fx.GLB     |
+| ocean_mixed_layer_thickness_defined_by_sigma_t               | m          | mon         | mld                                                                      | Omon.mlotst           | ocean.mlotst.tavg-u-hxy-sea.mon.GLB      |
+| sea_area_fraction                                            | %          | fx          | unknown                                                                  | Ofx.sftof             | ocean.sftof.ti-u-hxy-u.fx.GLB            |
+| sea_water_salinity                                           | 1E-03      | mon         | salt                                                                     | Omon.so               | ocean.so.tavg-ol-hxy-sea.mon.GLB         |
+| sea_surface_salinity                                         | 1E-03      | day         | sss                                                                      | Oday.sos              | ocean.sos.tavg-u-hxy-sea.day.GLB         |
+| sea_surface_salinity                                         | 1E-03      | mon         | sss                                                                      | Omon.sos              | ocean.sos.tavg-u-hxy-sea.mon.GLB         |
+| downward_x_stress_at_sea_water_surface                       | N m-2      | mon         | tau_x                                                                    | Omon.tauuo            | ocean.tauuo.tavg-u-hxy-sea.mon.GLB       |
+| downward_y_stress_at_sea_water_surface                       | N m-2      | mon         | tau_y                                                                    | Omon.tauvo            | ocean.tauvo.tavg-u-hxy-sea.mon.GLB       |
+| sea_water_potential_temperature                              | degC       | mon         | pot_temp                                                                 | Omon.thetao           | ocean.thetao.tavg-ol-hxy-sea.mon.GLB     |
+| cell_thickness                                               | m          | mon         | dht                                                                      | Omon.thkcello         | ocean.thkcello.tavg-ol-hxy-sea.mon.GLB   |
+| cell_thickness                                               | m          | fx          | dht                                                                      | Ofx.thkcello          | ocean.thkcello.ti-ol-hxy-sea.fx.GLB      |
+| sea_surface_temperature                                      | degC       | day         | surface_temp                                                             | Oday.tos              | ocean.tos.tavg-u-hxy-sea.day.GLB         |
+| sea_surface_temperature                                      | degC       | mon         | surface_temp                                                             | Omon.tos              | ocean.tos.tavg-u-hxy-sea.mon.GLB         |
+| ocean_mass_x_transport                                       | kg s-1     | mon         | tx_trans                                                                 | Omon.umo              | ocean.umo.tavg-ol-hxy-sea.mon.GLB        |
+| sea_water_x_velocity                                         | m s-1      | mon         | u                                                                        | Omon.uo               | ocean.uo.tavg-ol-hxy-sea.mon.GLB         |
+| ocean_mass_y_transport                                       | kg s-1     | mon         | ty_trans                                                                 | Omon.vmo              | ocean.vmo.tavg-ol-hxy-sea.mon.GLB        |
+| sea_water_y_velocity                                         | m s-1      | mon         | v                                                                        | Omon.vo               | ocean.vo.tavg-ol-hxy-sea.mon.GLB         |
+| upward_ocean_mass_transport                                  | kg s-1     | mon         | tz_trans                                                                 | Omon.wmo              | ocean.wmo.tavg-ol-hxy-sea.mon.GLB        |
+| upward_sea_water_velocity                                    | m s-1      | mon         | wt                                                                       | Omon.wo               | ocean.wo.tavg-ol-hxy-sea.mon.GLB         |
+| sea_surface_height_above_geoid                               | m          | day         | sea_level                                                                | Oday.zos              | ocean.zos.tavg-u-hxy-sea.day.GLB         |
+| sea_surface_height_above_geoid                               | m          | mon         | sea_level                                                                | Omon.zos              | ocean.zos.tavg-u-hxy-sea.mon.GLB         |
+| global_average_thermosteric_sea_level_change                 | m          | mon         | pot_temp, dht                                                            | Omon.zostoga          | ocean.zostoga.tavg-u-hm-sea.mon.GLB      |
+| sea_ice_area_fraction                                        | %          | day         | unknown                                                                  | SIday.siconc          | seaIce.siconc.tavg-u-hxy-u.day.GLB       |
+| sea_ice_area_fraction                                        | %          | mon         | unknown                                                                  | SImon.siconc          | seaIce.siconc.tavg-u-hxy-u.mon.GLB       |
+| sea_ice_amount                                               | kg m-2     | mon         | unknown                                                                  | SImon.simass          | seaIce.simass.tavg-u-hxy-si.mon.GLB      |
+| sea_ice_thickness                                            | m          | mon         | unknown                                                                  | SImon.sithick         | seaIce.sithick.tavg-u-hxy-si.mon.GLB     |
+| fraction_of_time_with_sea_ice_area_fraction_above_threshold  | 1          | mon         | unknown                                                                  | SImon.sitimefrac      | seaIce.sitimefrac.tavg-u-hxy-sea.mon.GLB |
+| sea_ice_x_velocity                                           | m s-1      | mon         | unknown                                                                  | SImon.siu             | seaIce.siu.tavg-u-hxy-si.mon.GLB         |
+| sea_ice_y_velocity                                           | m s-1      | mon         | unknown                                                                  | SImon.siv             | seaIce.siv.tavg-u-hxy-si.mon.GLB         |
+| surface_snow_thickness                                       | m          | mon         | unknown                                                                  | SImon.sisnthick       | seaIce.snd.tavg-u-hxy-sn.mon.GLB         |
+| surface_temperature                                          | K          | mon         | unknown                                                                  | SImon.sitemptop       | seaIce.ts.tavg-u-hxy-si.mon.GLB          |
