@@ -28,7 +28,7 @@ All information contained in filenames should be present in file metadata attrib
 
 # File content
 All output files will be NetCDF4 files.
-Files should be created using the NetCDF4 classic data model and data variables should be compressed using `zlib` with deflate level 1 and shuffle enabled.
+Data variables should be compressed using `zlib` with deflate level of at least 1 and shuffle enabled — if the compression level used is greater than 1 please consider the benefit of improved compression ratios against cost of increased compression/decompression times.
 Files should conform to the CF metadata conventions (version 1.11) and where possible should use the CF Convention Stanard Name Table where possible.
 
 For ACCESS-ESM1.6 every file will contain a single data variable/field from a single simulation.
