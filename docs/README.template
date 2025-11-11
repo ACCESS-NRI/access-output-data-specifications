@@ -27,7 +27,7 @@ ACCESS-ESM1.6 files will follow the following naming convention:
 All information contained in filenames should be present in file metadata attribute however it is best to avoid renaming files.
 
 # File content
-All output files will be NetCDF4 files.
+Output files should be NetCDF4 files wherever practical.
 Data variables should be compressed using `zlib` with deflate level of at least 1 and shuffle enabled — if the compression level used is greater than 1 please consider the benefit of improved compression ratios against cost of increased compression/decompression times.
 Files should conform to the CF metadata conventions (version 1.11) and where possible should use the CF Convention Stanard Name Table where possible.
 
