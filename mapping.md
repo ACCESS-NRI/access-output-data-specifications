@@ -2,6 +2,8 @@
 
 Mapping of ESM1.6 variables to [CMIP6](https://airtable.com/appcPYagzahjnnu2E/shrZpx0VItHJ24vuy/tblpo5L8maBIGlM1B/viwNNzrqK5oPL7zk2) and [CMIP7](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables).
 
+This document is a work-in-progress.
+
 ## CMIP6/7 to ACCESS-ESM 1.6 Mapping
 | CF Standard Name                                             | Units      | Frequency   | ESM1.5 Name                                                              | ESM1.5 Mapping                                            | CMIP6 Compound Name   | CMIP7 Compound Name                      |
 |--------------------------------------------------------------|------------|-------------|--------------------------------------------------------------------------|-----------------------------------------------------------|-----------------------|------------------------------------------|
