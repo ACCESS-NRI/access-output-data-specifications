@@ -15,5 +15,5 @@ d = {
     "mapping_table": mapping_table,
 }
 
-with open("mapping.md", "w") as output_f:
+with open("docs/mapping.md", "w") as output_f:
     output_f.write(mapping_template.format(**d))

@@ -17,5 +17,5 @@ d = {
     "variable_attrs_table": variable_table,
 }
 
-with open("README.md", "w") as output_f:
+with open("docs/README.md", "w") as output_f:
     output_f.write(readme_template.format(**d))
