@@ -6,7 +6,7 @@ build:
     python: "3"
 
 mkdocs:
-  configuration: .mkdocs.yaml
+  configuration: mkdocs.yaml
 
 formats:
   - pdf
