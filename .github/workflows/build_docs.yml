@@ -40,11 +40,12 @@ jobs:
           echo -e "creator_email: $email\ncreator_name: $name\ncreator_url: $url\norganisation: $name" > ~/.moppy/user.yml
 
       - name: Update README.md
-        run: |
-          cat ~/.moppy/user.yml
-          python scripts/update_readme.py
+        run: python scripts/update_readme.py
 
-      - name: Commit updated README.md
+      - name: Update mapping.md
+        run: python scripts/update_mapping.py
+
+      - name: Commit updated docs
         uses: EndBug/add-and-commit@v9
         with:
-          add: README.md
+          add: README.md mapping.md
