@@ -1,0 +1,23 @@
+ESM1.6:
+  name: fld_s02i261
+  frequency: mon
+  um_stash_source: m01s02i261
+  units: \%
+ESM1.5:
+  name: fld_s02i261
+  mapping: 1
+CMIP6:
+  name: Amon.cl
+  table: Amon
+  frequency: mon
+  table-section: Amon_oth
+CMIP7:
+  name: atmos.cl.tavg-al-hxy-u.mon.GLB
+  mapping: 1
+  frequency: mon
+  table: CMIP7_atmos.json
+  table-url: https://raw.githubusercontent.com/WCRP-CMIP/cmip7-cmor-tables/refs/heads/main/tables/CMIP7_atmos.json
+CF:
+  standard-name: cloud_area_fraction_in_atmosphere_layer
+notes:
+

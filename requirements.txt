@@ -1,3 +1,5 @@
 json_ref_dict
 pandas
 tabulate
+CMIP7-data-request-api
+access-moppy @ git+https://github.com/ACCESS-NRI/ACCESS-MOPPy@49032ad

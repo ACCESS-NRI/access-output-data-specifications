@@ -3,9 +3,11 @@ Builds custom markdown tables for ACCESS-NRI ESM1.6 data spec dcos from the
 schema defined in the ACCESS-NRI schema repo.
 """
 
-import json
 from json_ref_dict import materialize, RefDict
 import pandas as pd
+
+from get_cmip7_metadata import get_variables_list, get_variable_metadata
+from access_moppy.utilities import load_model_mappings
 
 # Define the columns for the output tables and their formatted names
 GLOBAL_COLS = {
@@ -22,6 +24,15 @@ VARIABLE_COLS = {
     "examples": "Examples",
 }
 
+MAPPING_COLS = {
+    "standard_name": "CF Standard Name",
+    "units": "Units",
+    "frequency": "Frequency",
+    "esm15_name": "ESM1.5 Name",
+    "esm15_mapping": "ESM1.5 Mapping",
+    "cmip6_compound_name": "CMIP6 Compound Name",
+    "cmip7_compound_name": "CMIP7 Compound Name",
+}
 
 def schema2md(schema_url, dot_point_lists=True):
     """
@@ -147,3 +158,90 @@ def schema2md(schema_url, dot_point_lists=True):
     variable_md_str = variable_final_df.to_markdown(index=False, tablefmt="github")
 
     return global_md_str, variable_md_str
+
+
+def _parse_mapping(map_d):
+    if isinstance(map_d, dict):
+        if 'type' in map_d and map_d['type'] == 'direct':
+            return ""
+        else:
+            op = map_d["operation"]
+            join_str = ", "
+            if op == "multiply":
+                join_str = " * "
+                op = ""
+            elif op == "add":
+                join_str = " + "
+                op = ""
+            elif op == "subtract":
+                join_str = " - "
+                op = ""
+        
+            try:
+                args = map_d["operands"]
+            except KeyError:
+                # Try 'args' instead of operands, sometimes these are numbers not strings
+                args = map_d["args"]
+            args = map(_parse_mapping, args)
+            args = join_str.join(args)
+            return f"{op}({args})"
+    else:
+        return str(map_d)
+
+
+def mapping2md():
+    """
+    Acquire mapping information from cached CMIP7 variable metadata and from
+    ACCESS MOPPy mapping.
+
+    Returns:
+        mapping_md: A string of markdown/html representing the mappings table
+    """
+    # Load cmip7 core variable metadata
+    cmip7_core_vars = get_variable_metadata(get_variables_list('Core'))
+
+    # Load MOPPy mappings (presumably for CMIP6 ESM1.5?)
+    moppy_mappings = {}
+
+    # Augment CMIP7 metadata with MOPPy mappings
+    for cmip7_var, cmip7_meta in cmip7_core_vars.items():
+        _, cmip6_var = cmip7_meta['cmip6_compound_name'].split('.')
+
+        # Get matching ACCESS variables using MOPPy
+        moppy_mapping = load_model_mappings(cmip7_meta['cmip6_compound_name'])
+        moppy_var_keys = list(moppy_mapping.keys())
+        assert len(moppy_var_keys) <= 1, "MOPPy unexpected returned more than one key for {cmip6_var} - {moppy_var_keys}."
+
+        if moppy_mapping == {}:
+            esm_name = 'unknown'
+            esm_mapping = 'unknown'
+        else:
+            # Add ACCESS variable to the dict
+            try:
+                esm_name = moppy_mapping[moppy_var_keys[0]]['model_variables']
+            except (KeyError, IndexError):
+                esm_name = 'unknown'
+
+            # Add the MOPPy mapping to the dict
+            esm_mapping = _parse_mapping(moppy_mapping[moppy_var_keys[0]]['calculation'])
+
+            # Remove parentheses from simple mappings (e.g. "(A+B)" -> "A+B")
+            if len(esm_mapping) > 2 and esm_mapping[0] == '(' and esm_mapping[-1] == ')':
+                esm_mapping = esm_mapping[1:-1]
+
+        cmip7_core_vars[cmip7_var]['esm15_name'] = esm_name
+        cmip7_core_vars[cmip7_var]['esm15_mapping'] = esm_mapping
+
+    # Convert CMIP7 dict into pandas df
+    df = pd.DataFrame.from_records(cmip7_core_vars).T
+
+    # Convert lists to comma separated strings
+    df['esm15_name'] = df['esm15_name'].apply(lambda x: ', '.join(x) if isinstance(x, list) else x)
+
+    # Sort rows
+    sort_order = ['cmip7_compound_name']
+    for sort_by in sort_order[::-1]:
+        df = df.sort_values(sort_by)
+
+    final_df = df[MAPPING_COLS.keys()].rename(columns=MAPPING_COLS)
+    return final_df.to_markdown(index=False, tablefmt="github")
