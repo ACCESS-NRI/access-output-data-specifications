@@ -41,7 +41,7 @@ jobs:
 
       - name: Update README.md
         run: |
-          cat .moppy/user.yml
+          cat ~/.moppy/user.yml
           python scripts/update_readme.py
 
       - name: Commit updated README.md
