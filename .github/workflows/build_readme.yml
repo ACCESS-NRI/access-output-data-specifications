@@ -27,6 +27,9 @@ jobs:
         with:
           python-version: 3.12.3
 
+      - name: Install dependancies
+        run: python -m pip install -r requirements.txt
+
       - name: Create config file for MOPPy
         # Details don't matter
         run: |
@@ -36,11 +39,10 @@ jobs:
           mkdir .moppy
           echo -e "creator_email: $email\ncreator_name: $name\ncreator_url: $url\norganisation: $name" > .moppy/user.yml
 
-      - name: Install dependancies
-        run: python -m pip install -r requirements.txt
-
       - name: Update README.md
-        run: python scripts/update_readme.py
+        run: |
+          cat .moppy/user.yml
+          python scripts/update_readme.py
 
       - name: Commit updated README.md
         uses: EndBug/add-and-commit@v9
