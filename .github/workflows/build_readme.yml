@@ -36,8 +36,8 @@ jobs:
           email=data.access.nri@anu.edu.au
           name=ACCESS-NRI
           url=data.access.nri@anu.edu.au
-          mkdir .moppy
-          echo -e "creator_email: $email\ncreator_name: $name\ncreator_url: $url\norganisation: $name" > .moppy/user.yml
+          mkdir ~/.moppy
+          echo -e "creator_email: $email\ncreator_name: $name\ncreator_url: $url\norganisation: $name" > ~/.moppy/user.yml
 
       - name: Update README.md
         run: |
