@@ -1,0 +1,10 @@
+site_name: ACCESS Output Data Specifications
+theme:
+  name: readthedocs
+  highlightjs: true
+plugins:
+  - search
+
+nav:
+  - Specification: README.md
+  - Mapping: mapping.md
