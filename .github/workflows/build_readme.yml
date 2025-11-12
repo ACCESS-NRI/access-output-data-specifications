@@ -34,7 +34,7 @@ jobs:
           name=ACCESS-NRI
           url=data.access.nri@anu.edu.au
           mkdir .moppy
-          cat -e "creator_email: $email\ncreator_name: $name\ncreator_url: $url\norganisation: $name" > .moppy/user.yml
+          echo -e "creator_email: $email\ncreator_name: $name\ncreator_url: $url\norganisation: $name" > .moppy/user.yml
 
       - name: Install dependancies
         run: python -m pip install -r requirements.txt
