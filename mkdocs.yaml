@@ -8,3 +8,10 @@ plugins:
 nav:
   - Specification: README.md
   - Mapping: mapping.md
+
+extra_css:
+  - https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css
+
+extra_javascript:
+  - https://cdn.datatables.net/2.3.4/js/dataTables.min.js
+  - javascripts/site.js

@@ -244,4 +244,4 @@ def mapping2md():
         df = df.sort_values(sort_by)
 
     final_df = df[MAPPING_COLS.keys()].rename(columns=MAPPING_COLS)
-    return final_df.to_markdown(index=False, tablefmt="github")
+    return final_df.to_html(index=False, table_id="mapping", classes="display")
