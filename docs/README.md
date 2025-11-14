@@ -68,6 +68,7 @@ Attributes not specified in the following table are permitted.
 Variable attributes provide information on the data variable such as the units used, standard_name, or cell_methods used to generate the data.
 In netCDF files there can be multiple coordinate variables such as `time`, `latitude`, and `time_bnds` and the main output field variable of which there should be only one.
 Where possible variables and their attributes should follow CF-v1.11 conventions.
+
 | Title         | Description                                                                                                                                                                  | Type   | Examples                                                                                                                           |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|------------------------------------------------------------------------------------------------------------------------------------|
 | _FillValue    | Value assigned to portions of the variable fields that are "missing".                                                                                                        | number | <ul><li>-2147483647</li><li>-9999</li></ul>                                                                                        |
