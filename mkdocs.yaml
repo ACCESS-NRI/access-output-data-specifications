@@ -6,7 +6,7 @@ plugins:
   - search
 
 nav:
-  - Specification: README.md
+  - Specification: specification.md
   - Mapping: mapping.md
 
 extra_css:

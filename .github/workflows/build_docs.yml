@@ -1,4 +1,4 @@
-name: Build README
+name: Build Docs
 
 on:
   pull_request:
@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-readme:
-    name: build-readme
+  build-docs:
+    name: build-docs
     runs-on: ubuntu-latest
     # Commit step needs write permissions
     permissions:
@@ -39,8 +39,8 @@ jobs:
           mkdir ~/.moppy
           echo -e "creator_email: $email\ncreator_name: $name\ncreator_url: $url\norganisation: $name" > ~/.moppy/user.yml
 
-      - name: Update README.md
-        run: python scripts/update_readme.py
+      - name: Update specification.md
+        run: python scripts/update_specification.py
 
       - name: Update mapping.md
         run: python scripts/update_mapping.py
