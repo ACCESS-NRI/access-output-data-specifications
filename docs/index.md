@@ -2,8 +2,8 @@
 
 These docs describe:
 
-- The desired output data specification for ACCESS models
-- The mapping from ACCESS model output fields to CMIP7 fields
+- The desired output data [specification](specification.md) for ACCESS models
+- The [mapping](mapping.md) from ACCESS model output fields to CMIP7 fields
 
 Much of the content is automatically generated from:
 
