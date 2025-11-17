@@ -11,14 +11,14 @@ Soon to come are variable mappings from ACCESS to CMIP6/7.
 More information on the ACCESS models can be found [here](https://www.access-nri.org.au/models/).
 Please direct any issues, feedback or queries on the data specification to <data.access.nri@anu.edu.au>.
 
-# Directory and Filename
+## Directory and Filename
 **TODO: Confirm the following is correct.**
-## Directory Structure
+### Directory Structure
 ACCESS-ESM1.6 data output has the following struction under the current working directory:
 
 `<run>/output<xxx>/<realm>/<filename.nc>`
 
-## File naming
+### File naming
 ACCESS-ESM1.6 files will follow the following naming convention:
 - Atmosphere (UMx output): TBC
 - Ocean (MOM5 output): TBC
@@ -26,16 +26,16 @@ ACCESS-ESM1.6 files will follow the following naming convention:
 
 All information contained in filenames should be present in file metadata attribute however it is best to avoid renaming files.
 
-# File content
+## File content
 Output files should be NetCDF4 files wherever practical.
 Data variables should be compressed using `zlib` with deflate level of at least 1 and shuffle enabled — if the compression level used is greater than 1 please consider the benefit of improved compression ratios against cost of increased compression/decompression times.
 Files should conform to the CF metadata conventions (version 1.11) and where possible should use the CF Convention Stanard Name Table where possible.
 
 For ACCESS-ESM1.6 every file will contain a single data variable/field from a single simulation.
 
-# Metadata Attributes
+## Metadata Attributes
 
-## Global Attributes
+### Global Attributes
 Global attributes provide information on the context for the data such as the creation time, experiment it is part of, or science configurations used.
 All the attributes in the table below are recommended but not all are required as detailed in the `Required` column.
 All these global attributes have type `string`.
@@ -64,7 +64,7 @@ Attributes not specified in the following table are permitted.
 | title                  | Name of the dataset following the Payu standard of...                                                                                                               | PUT EXAMPLE HERE                                             |                                                                                                                                                                                                  | Yes        |
 | variable_id            | A list of short variable names, separated by commas, for the data variable/s that appear in this file. These names should match the netCDF variable names.          | <ul><li>huss</li><li>uas,vas</li></ul>                       |                                                                                                                                                                                                  | No         |
 
-## Variable Attributes
+### Variable Attributes
 Variable attributes provide information on the data variable such as the units used, standard_name, or cell_methods used to generate the data.
 In netCDF files there can be multiple coordinate variables such as `time`, `latitude`, and `time_bnds` and the main output field variable of which there should be only one.
 Where possible variables and their attributes should follow CF-v1.11 conventions.
