@@ -17,8 +17,8 @@ If a cell in the Mapping column is empty then no transformation is required.
       <th>Frequency</th>
       <th>ESM1.5 Name</th>
       <th>ESM1.5 Mapping</th>
-      <th>CMIP6 Compound Name</th>
-      <th>CMIP7 Compound Name</th>
+      <th>CMIP6 Name</th>
+      <th>CMIP7 Name</th>
     </tr>
   </thead>
   <tbody>
