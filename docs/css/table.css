@@ -1,0 +1,16 @@
+/**
+ * This widens the content to look better on wide screens and
+ * makes the tables wrap contents instead of having the table
+ * horizontally scroll.
+ */
+.wy-nav-content {
+    max-width: 90%;
+}
+
+.wy-table-responsive table td, .wy-table-responsive table th {
+    white-space: normal !important;
+}
+
+.wy-table-responsive {
+    overflow : visible !important;
+}
