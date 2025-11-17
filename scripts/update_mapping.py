@@ -6,7 +6,7 @@ schema2md.py
 from schema2md import mapping2md
 
 # Open the mapping template
-with open("docs/mapping.template", "r") as f:
+with open("templates/mapping.template", "r") as f:
     mapping_template = f.read()
 
 # Open the global and variable tables
@@ -15,5 +15,5 @@ d = {
     "mapping_table": mapping_table,
 }
 
-with open("docs/mapping.md", "w") as output_f:
+with open("templates/mapping.md", "w") as output_f:
     output_f.write(mapping_template.format(**d))
