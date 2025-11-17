@@ -6,7 +6,7 @@ schema2md.py
 from schema2md import schema2md
 
 # Open the readme template
-with open("docs/README.template", "r") as f:
+with open("templates/README.template", "r") as f:
     readme_template = f.read()
 
 # Open the global and variable tables
@@ -17,5 +17,5 @@ d = {
     "variable_attrs_table": variable_table,
 }
 
-with open("docs/README.md", "w") as output_f:
+with open("templates/README.md", "w") as output_f:
     output_f.write(readme_template.format(**d))
