@@ -1,4 +1,4 @@
-# Access Output Data Specification
+# ACCESS Output Data Specification
 
 The Access Output Data Specification repository contains the documentation
 describing:
