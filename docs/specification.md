@@ -79,7 +79,6 @@ Where possible variables and their attributes should follow CF-v1.11 conventions
 
 ## Acknowledgements
 We would like to acknowlege the specifications and conventions we have used and consulted to construct this specification and the tremendous work of their authors:
-
 - [CMIP6](https://pcmdi.llnl.gov/CMIP6/Guide/dataUsers.html)
 - [CORDEX](https://cordex.org/2024/04/12/the-cordex-cmip6-archiving-specifications-for-dynamical-downscaling-now-published/)
 - [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3)
