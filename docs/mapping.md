@@ -6,7 +6,7 @@ This document is a work-in-progress.
 
 ## CMIP6/7 to ACCESS-ESM 1.6 Mapping
 
-The `ESM1.5 Mapping` shows how to map ACCESS-ESM1.6 fields to CMIP7 fields.
+The `ESM1.5 Mapping` column shows how to map ACCESS-ESM1.6 fields to CMIP7 fields.
 If a cell in the Mapping column is empty then no transformation is required.
 
 <table border="1" class="dataframe display" id="mapping">
