@@ -30,8 +30,8 @@ MAPPING_COLS = {
     "frequency": "Frequency",
     "esm15_name": "ESM1.5 Name",
     "esm15_mapping": "ESM1.5 Mapping",
-    "cmip6_compound_name": "CMIP6 Compound Name",
-    "cmip7_compound_name": "CMIP7 Compound Name",
+    "cmip6_compound_name": "CMIP6 Name",
+    "cmip7_compound_name": "CMIP7 Name",
 }
 
 def schema2md(schema_url, dot_point_lists=True):
