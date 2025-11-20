@@ -12,7 +12,6 @@ More information on the ACCESS models can be found [here](https://www.access-nri
 Please direct any issues, feedback or queries on the data specification to <data.access.nri@anu.edu.au>.
 
 ## Directory and Filename
-**TODO: Confirm the following is correct.**
 ### Directory Structure
 ACCESS-ESM1.6 data output has the following struction under the current working directory:
 
