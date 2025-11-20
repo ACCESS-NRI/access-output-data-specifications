@@ -14,8 +14,8 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <th>CF Standard Name</th>
       <th>Units</th>
       <th>Frequency</th>
-      <th>ESM1.5 Name</th>
-      <th>ESM1.5 Mapping</th>
+      <th>ACCESS-ESM Name</th>
+      <th>ACCESS-ESM Mapping</th>
       <th>CMIP6 Name</th>
       <th>CMIP7 Name</th>
     </tr>
