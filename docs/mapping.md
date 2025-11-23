@@ -1,10 +1,10 @@
 # ACCESS ESM 1.6 Output Variable Mapping
 
 This table shows the mapping of [CMIP6](https://airtable.com/appcPYagzahjnnu2E/shrZpx0VItHJ24vuy/tblpo5L8maBIGlM1B/viwNNzrqK5oPL7zk2) 
-and [CMIP7](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables) variables to ACCESS-ESM1.6 to as defined
+and [CMIP7](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables) Core variables to ACCESS-ESM to as defined
 by the [ACCESS-MOPPy](https://github.com/ACCESS-NRI/ACCESS-MOPPy) CMORisation tool.
 
-The `ESM1.5 Mapping` column shows how to map ACCESS-ESM1.6 fields to CMIP6/7 fields.
+The `ESM1.5 Mapping` column shows how to map ACCESS-ESM fields to CMIP6/7 fields.
 If a cell in the Mapping column is empty then no transformation is required and 
 if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
 
