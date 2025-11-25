@@ -24,7 +24,7 @@ ACCESS-ESM1.6 files will follow the following naming convention:
 - Ocean (MOM5 output): TBC
 - Sea-ice (CICEx output): TBC
 
-All information contained in filenames should be present in file metadata attribute however it is best to avoid renaming files.
+All information contained in filenames should be present in file metadata attributes however it is best practice to avoid renaming files.
 
 ## File content
 Output files should be NetCDF4 files wherever practical.
