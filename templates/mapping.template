@@ -1,4 +1,4 @@
-# ACCESS ESM 1.6 Output Variable Mapping
+# ACCESS Model Output Variable Mapping
 
 This table shows the mapping of [CMIP6](https://airtable.com/appcPYagzahjnnu2E/shrZpx0VItHJ24vuy/tblpo5L8maBIGlM1B/viwNNzrqK5oPL7zk2) 
 and [CMIP7](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables) Core variables to ACCESS-ESM to as defined
