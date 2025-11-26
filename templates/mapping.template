@@ -1,7 +1,7 @@
 # ACCESS Model Output Variable Mapping
 
 This table shows the mapping of [CMIP6](https://airtable.com/appcPYagzahjnnu2E/shrZpx0VItHJ24vuy/tblpo5L8maBIGlM1B/viwNNzrqK5oPL7zk2) 
-and [CMIP7](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables) Core variables to ACCESS-ESM to as defined
+and [CMIP7](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables) Core variables to ACCESS variables as defined
 by the [ACCESS-MOPPy](https://github.com/ACCESS-NRI/ACCESS-MOPPy) CMORisation tool.
 
 The `ESM1.5 Mapping` column shows how to map ACCESS-ESM fields to CMIP6/7 fields.

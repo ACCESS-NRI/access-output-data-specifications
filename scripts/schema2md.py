@@ -6,6 +6,7 @@ schema defined in the ACCESS-NRI schema repo.
 from json_ref_dict import materialize, RefDict
 import pandas as pd
 
+from stashmasters import StashVar
 from get_cmip7_metadata import get_variables_list, get_variable_metadata
 from access_moppy.utilities import load_model_mappings
 
@@ -25,13 +26,13 @@ VARIABLE_COLS = {
 }
 
 MAPPING_COLS = {
+    "cmip7_compound_name": "CMIP7 Name",
+    "cmip6_compound_name": "CMIP6 Name",
     "standard_name": "CF Standard Name",
     "units": "Units",
     "frequency": "Frequency",
-    "esm15_name": "ACCESS-ESM Name",
-    "esm15_mapping": "ACCESS-ESM Mapping",
-    "cmip6_compound_name": "CMIP6 Name",
-    "cmip7_compound_name": "CMIP7 Name",
+    "esm15_name": "ACCESS Name",
+    "esm15_mapping": "Mapping",
 }
 
 def schema2md(schema_url, dot_point_lists=True):
@@ -189,6 +190,28 @@ def _parse_mapping(map_d):
         return str(map_d)
 
 
+def access2cfname(esm_varname):
+    """
+    Convert ACCESS stash-like name to CF standard name.
+
+    ACCESS names are sometimes like this:
+    "fld_s02i204" - e.g. fld_{stash_code}
+    "fld_s03i236_max" - e.g. fld_{stash_code}_{min/max}
+    """
+    try:
+        stash_code = 'm01' + esm_varname.split('_')[1]
+
+        stash_number = int(stash_code[4:6] + stash_code[7:10])
+        sv = StashVar(stash_number, stashmaster="access-esm1.6")
+
+        standard_name = sv.standard_name if sv.standard_name else sv.long_name.lower()
+    except (ValueError, IndexError):
+        # If name doesn't match expected format
+        standard_name = 'unknown'
+
+    return standard_name
+
+
 def mapping2md():
     """
     Acquire mapping information from cached CMIP7 variable metadata and from
@@ -219,6 +242,11 @@ def mapping2md():
             # Add ACCESS variable to the dict
             try:
                 esm_name = moppy_mapping[moppy_var_keys[0]]['model_variables']
+
+                # Add standard name too if esm name is fld_{stashcode}
+                if any(['fld_' in name for name in esm_name]):
+                    esm_standard_names = map(access2cfname, esm_name)
+                    esm_name = [f"{name} ({standard_name})" for name, standard_name in zip(esm_name, esm_standard_names)]
             except (KeyError, IndexError):
                 esm_name = 'unknown'
 
@@ -235,8 +263,9 @@ def mapping2md():
     # Convert CMIP7 dict into pandas df
     df = pd.DataFrame.from_records(cmip7_core_vars).T
 
-    # Convert lists to comma separated strings
-    df['esm15_name'] = df['esm15_name'].apply(lambda x: ', '.join(x) if isinstance(x, list) else x)
+    # Convert lists to comma and newline separated strings
+    for col_name in ['esm15_name']:
+        df[col_name] = df[col_name].apply(lambda x: ',<br>'.join(x) if isinstance(x, list) else x)
 
     # Sort rows
     sort_order = ['cmip7_compound_name']
@@ -244,4 +273,4 @@ def mapping2md():
         df = df.sort_values(sort_by)
 
     final_df = df[MAPPING_COLS.keys()].rename(columns=MAPPING_COLS)
-    return final_df.to_html(index=False, table_id="mapping", classes="display")
+    return final_df.to_html(index=False, table_id="mapping", classes="display", escape=False)
