@@ -9,11 +9,12 @@ from schema2md import mapping2md
 with open("templates/mapping.template", "r") as f:
     mapping_template = f.read()
 
-# Open the global and variable tables
+# Constuct the mapping table
 mapping_table = mapping2md()
 d = {
     "mapping_table": mapping_table,
 }
 
+# Put the table into the template and output to file
 with open("docs/mapping.md", "w") as output_f:
     output_f.write(mapping_template.format(**d))

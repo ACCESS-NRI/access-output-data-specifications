@@ -9,7 +9,7 @@ from schema2md import schema2md
 with open("templates/specification.template", "r") as f:
     specification_template = f.read()
 
-# Open the global and variable tables
+# Load the global and variable attribute tables from the schema
 SCHEMA_URL = "https://raw.githubusercontent.com/ACCESS-NRI/schema/refs/heads/main/au.org.access-nri/model/output/file-metadata/2-0-0/2-0-0.json"
 global_table, variable_table = schema2md(SCHEMA_URL)
 d = {
@@ -17,5 +17,6 @@ d = {
     "variable_attrs_table": variable_table,
 }
 
+# Put the tables into the template and output to file
 with open("docs/specification.md", "w") as output_f:
     output_f.write(specification_template.format(**d))
