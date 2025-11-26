@@ -30,7 +30,7 @@ MAPPING_COLS = {
     "cmip6_compound_name": "CMIP6 Name",
     "standard_name": "CF Standard Name",
     "units": "Units",
-    "frequency": "Frequency",
+    "frequency": "Freq",
     "esm15_name": "ACCESS Name",
     "esm15_mapping": "Mapping",
 }
