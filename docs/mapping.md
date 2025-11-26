@@ -4,7 +4,7 @@ This table shows the mapping of [CMIP6](https://airtable.com/appcPYagzahjnnu2E/s
 and [CMIP7](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables) Core variables to ACCESS variables as defined
 by the [ACCESS-MOPPy](https://github.com/ACCESS-NRI/ACCESS-MOPPy) CMORisation tool.
 
-The `ESM1.5 Mapping` column shows how to map ACCESS-ESM fields to CMIP6/7 fields.
+The `Mapping` column shows how to map ACCESS-ESM fields to CMIP6/7 fields.
 If a cell in the Mapping column is empty then no transformation is required and 
 if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
 
@@ -15,7 +15,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <th>CMIP6 Name</th>
       <th>CF Standard Name</th>
       <th>Units</th>
-      <th>Frequency</th>
+      <th>Freq</th>
       <th>ACCESS Name</th>
       <th>Mapping</th>
     </tr>
