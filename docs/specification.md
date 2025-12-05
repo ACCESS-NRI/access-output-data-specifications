@@ -30,7 +30,7 @@ All information contained in filenames should be present in file metadata attrib
 Output files should be NetCDF4 files wherever practical.
 Data variables should be compressed using `zlib` with deflate level of at least 1 and shuffle enabled — if the compression level used is greater than 1 please consider the benefit of improved compression ratios against cost of increased compression/decompression times.
 
-Where possible files should conform to the CF metadata conventions (version 1.11) and use the CF Convention Stanard Name Table.
+Where possible files should conform to the CF metadata conventions (version 1.11) and use the CF Convention Standard Name Table.
 
 For ACCESS-ESM1.6 every file should contain a single data variable/field from a single simulation.
 
@@ -38,9 +38,9 @@ For ACCESS-ESM1.6 every file should contain a single data variable/field from a 
 
 ### Global Attributes
 Global attributes provide information on the context for the data such as the creation time, experiment it is part of, or science configurations used.
-All the attributes in the table below are recommended but not all are required as detailed in the `Required` column.
+All the attributes in the table below are recommended but not all are required, see the `Required` column, and attributes not specified are permitted.
 All these global attributes have type `string`.
-Attributes not specified in the following table are permitted.
+Where possible sort the attributes alphabetically by name.
 
 | Title                  | Description                                                                                                                                                         | Examples                                                                               | Rules                                                                                                                                                                                            | Required   |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
