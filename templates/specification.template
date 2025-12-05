@@ -38,9 +38,9 @@ For ACCESS-ESM1.6 every file should contain a single data variable/field from a 
 
 ### Global Attributes
 Global attributes provide information on the context for the data such as the creation time, experiment it is part of, or science configurations used.
-All the attributes in the table below are recommended but not all are required as detailed in the `Required` column.
+All the attributes in the table below are recommended but not all are required, see the `Required` column, and attributes not specified are permitted.
 All these global attributes have type `string`.
-Attributes not specified in the following table are permitted.
+Where possible sort the attributes alphabetically by name.
 
 {global_attrs_table}
 
