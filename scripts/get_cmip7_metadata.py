@@ -17,7 +17,7 @@ def get_variables_list(priority='Core'):
     """
     content_dic = dump_transformation.get_transformed_content()
     DR = data_request.DataRequest.from_separated_inputs(**content_dic)
-    variables = DR.find_variables_per_priority('Core')
+    variables = DR.find_variables_per_priority(priority)
     return [v.id for v in variables]
 
 def get_variable_metadata(variable_list, use_dreq_version='v1.2.2.2'):

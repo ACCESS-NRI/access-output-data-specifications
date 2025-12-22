@@ -223,9 +223,6 @@ def mapping2md():
     # Load cmip7 core variable metadata
     cmip7_core_vars = get_variable_metadata(get_variables_list('Core'))
 
-    # Load MOPPy mappings (presumably for CMIP6 ESM1.5?)
-    moppy_mappings = {}
-
     # Augment CMIP7 metadata with MOPPy mappings
     for cmip7_var, cmip7_meta in cmip7_core_vars.items():
         _, cmip6_var = cmip7_meta['cmip6_compound_name'].split('.')
