@@ -38,4 +38,5 @@ def get_variable_metadata(variable_list, use_dreq_version='v1.2.2.2'):
         content,
         use_dreq_version,
         compound_names=variable_list,
+        verbose=False
     )
