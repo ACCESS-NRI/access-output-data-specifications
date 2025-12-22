@@ -22,7 +22,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
   </thead>
   <tbody>
     <tr>
-      <td>atmos.areacella.ti-u-hxy-u.fx.GLB</td>
+      <td>atmos.areacella.ti-u-hxy-u.fx.glb</td>
       <td>fx.areacella</td>
       <td>cell_area</td>
       <td>m2</td>
@@ -31,7 +31,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.cl.tavg-al-hxy-u.mon.GLB</td>
+      <td>atmos.cl.tavg-al-hxy-u.mon.glb</td>
       <td>Amon.cl</td>
       <td>cloud_area_fraction_in_atmosphere_layer</td>
       <td>%</td>
@@ -40,7 +40,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>level_to_height(fld_s02i261)</td>
     </tr>
     <tr>
-      <td>atmos.cli.tavg-al-hxy-u.mon.GLB</td>
+      <td>atmos.cli.tavg-al-hxy-u.mon.glb</td>
       <td>Amon.cli</td>
       <td>mass_fraction_of_cloud_ice_in_air</td>
       <td>kg kg-1</td>
@@ -49,7 +49,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>level_to_height(fld_s02i309)</td>
     </tr>
     <tr>
-      <td>atmos.clivi.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.clivi.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.clivi</td>
       <td>atmosphere_mass_content_of_cloud_ice</td>
       <td>kg m-2</td>
@@ -58,7 +58,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.clt.tavg-u-hxy-u.day.GLB</td>
+      <td>atmos.clt.tavg-u-hxy-u.day.glb</td>
       <td>day.clt</td>
       <td>cloud_area_fraction</td>
       <td>%</td>
@@ -67,7 +67,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>fld_s02i204 * 100</td>
     </tr>
     <tr>
-      <td>atmos.clt.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.clt.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.clt</td>
       <td>cloud_area_fraction</td>
       <td>%</td>
@@ -76,7 +76,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>fld_s02i204 * 100</td>
     </tr>
     <tr>
-      <td>atmos.clw.tavg-al-hxy-u.mon.GLB</td>
+      <td>atmos.clw.tavg-al-hxy-u.mon.glb</td>
       <td>Amon.clw</td>
       <td>mass_fraction_of_cloud_liquid_water_in_air</td>
       <td>kg kg-1</td>
@@ -85,7 +85,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>level_to_height(fld_s02i308)</td>
     </tr>
     <tr>
-      <td>atmos.clwvi.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.clwvi.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.clwvi</td>
       <td>atmosphere_mass_content_of_cloud_condensed_water</td>
       <td>kg m-2</td>
@@ -94,7 +94,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>atmos.evspsbl.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.evspsbl.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.evspsbl</td>
       <td>water_evapotranspiration_flux</td>
       <td>kg m-2 s-1</td>
@@ -103,7 +103,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.hfls.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.hfls.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.hfls</td>
       <td>surface_upward_latent_heat_flux</td>
       <td>W m-2</td>
@@ -112,7 +112,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.hfss.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.hfss.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.hfss</td>
       <td>surface_upward_sensible_heat_flux</td>
       <td>W m-2</td>
@@ -121,7 +121,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.hur.tavg-p19-hxy-air.mon.GLB</td>
+      <td>atmos.hur.tavg-p19-hxy-air.mon.glb</td>
       <td>Amon.hur</td>
       <td>relative_humidity</td>
       <td>%</td>
@@ -130,7 +130,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.hur.tavg-p19-hxy-u.day.GLB</td>
+      <td>atmos.hur.tavg-p19-hxy-u.day.glb</td>
       <td>day.hur</td>
       <td>relative_humidity</td>
       <td>%</td>
@@ -139,7 +139,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.hurs.tavg-h2m-hxy-u.6hr.GLB</td>
+      <td>atmos.hurs.tavg-h2m-hxy-u.6hr.glb</td>
       <td>6hrPlev.hurs</td>
       <td>relative_humidity</td>
       <td>%</td>
@@ -148,7 +148,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.hurs.tavg-h2m-hxy-u.day.GLB</td>
+      <td>atmos.hurs.tavg-h2m-hxy-u.day.glb</td>
       <td>day.hurs</td>
       <td>relative_humidity</td>
       <td>%</td>
@@ -157,7 +157,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.hurs.tavg-h2m-hxy-u.mon.GLB</td>
+      <td>atmos.hurs.tavg-h2m-hxy-u.mon.glb</td>
       <td>Amon.hurs</td>
       <td>relative_humidity</td>
       <td>%</td>
@@ -166,7 +166,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.hus.tavg-p19-hxy-u.day.GLB</td>
+      <td>atmos.hus.tavg-p19-hxy-u.day.glb</td>
       <td>day.hus</td>
       <td>specific_humidity</td>
       <td>1</td>
@@ -175,7 +175,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.hus.tavg-p19-hxy-u.mon.GLB</td>
+      <td>atmos.hus.tavg-p19-hxy-u.mon.glb</td>
       <td>Amon.hus</td>
       <td>specific_humidity</td>
       <td>1</td>
@@ -184,7 +184,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.huss.tavg-h2m-hxy-u.day.GLB</td>
+      <td>atmos.huss.tavg-h2m-hxy-u.day.glb</td>
       <td>day.huss</td>
       <td>specific_humidity</td>
       <td>1</td>
@@ -193,7 +193,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.huss.tavg-h2m-hxy-u.mon.GLB</td>
+      <td>atmos.huss.tavg-h2m-hxy-u.mon.glb</td>
       <td>Amon.huss</td>
       <td>specific_humidity</td>
       <td>1</td>
@@ -202,7 +202,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.huss.tpt-h2m-hxy-u.3hr.GLB</td>
+      <td>atmos.huss.tpt-h2m-hxy-u.3hr.glb</td>
       <td>3hr.huss</td>
       <td>specific_humidity</td>
       <td>1</td>
@@ -211,7 +211,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.pr.tavg-u-hxy-u.1hr.GLB</td>
+      <td>atmos.pr.tavg-u-hxy-u.1hr.glb</td>
       <td>E1hr.pr</td>
       <td>precipitation_flux</td>
       <td>kg m-2 s-1</td>
@@ -220,7 +220,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.pr.tavg-u-hxy-u.3hr.GLB</td>
+      <td>atmos.pr.tavg-u-hxy-u.3hr.glb</td>
       <td>3hr.pr</td>
       <td>precipitation_flux</td>
       <td>kg m-2 s-1</td>
@@ -229,7 +229,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.pr.tavg-u-hxy-u.day.GLB</td>
+      <td>atmos.pr.tavg-u-hxy-u.day.glb</td>
       <td>day.pr</td>
       <td>precipitation_flux</td>
       <td>kg m-2 s-1</td>
@@ -238,7 +238,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.pr.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.pr.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.pr</td>
       <td>precipitation_flux</td>
       <td>kg m-2 s-1</td>
@@ -247,7 +247,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.prc.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.prc.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.prc</td>
       <td>convective_precipitation_flux</td>
       <td>kg m-2 s-1</td>
@@ -256,7 +256,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>fld_s05i205 + fld_s05i206</td>
     </tr>
     <tr>
-      <td>atmos.prsn.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.prsn.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.prsn</td>
       <td>snowfall_flux</td>
       <td>kg m-2 s-1</td>
@@ -265,7 +265,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.prw.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.prw.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.prw</td>
       <td>atmosphere_mass_content_of_water_vapor</td>
       <td>kg m-2</td>
@@ -274,7 +274,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>fld_s30i404 - (fld_s30i403 + fld_s30i405 + fld_s30i406)</td>
     </tr>
     <tr>
-      <td>atmos.ps.tavg-u-hxy-u.day.GLB</td>
+      <td>atmos.ps.tavg-u-hxy-u.day.glb</td>
       <td>CFday.ps</td>
       <td>surface_air_pressure</td>
       <td>Pa</td>
@@ -283,7 +283,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.ps.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.ps.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.ps</td>
       <td>surface_air_pressure</td>
       <td>Pa</td>
@@ -292,7 +292,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.psl.tavg-u-hxy-u.day.GLB</td>
+      <td>atmos.psl.tavg-u-hxy-u.day.glb</td>
       <td>day.psl</td>
       <td>air_pressure_at_mean_sea_level</td>
       <td>Pa</td>
@@ -301,7 +301,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.psl.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.psl.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.psl</td>
       <td>air_pressure_at_mean_sea_level</td>
       <td>Pa</td>
@@ -310,7 +310,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.rlds.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.rlds.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.rlds</td>
       <td>surface_downwelling_longwave_flux_in_air</td>
       <td>W m-2</td>
@@ -319,7 +319,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.rldscs.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.rldscs.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.rldscs</td>
       <td>surface_downwelling_longwave_flux_in_air_assuming_clear_sky</td>
       <td>W m-2</td>
@@ -328,7 +328,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.rlus.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.rlus.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.rlus</td>
       <td>surface_upwelling_longwave_flux_in_air</td>
       <td>W m-2</td>
@@ -337,7 +337,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>((fld_s02i207 - fld_s02i201) + fld_s03i332) - fld_s02i205</td>
     </tr>
     <tr>
-      <td>atmos.rluscs.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.rluscs.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.rluscs</td>
       <td>surface_upwelling_longwave_flux_assuming_clear_sky</td>
       <td>W m-2</td>
@@ -346,7 +346,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.rlut.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.rlut.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.rlut</td>
       <td>toa_outgoing_longwave_flux</td>
       <td>W m-2</td>
@@ -355,7 +355,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.rlutcs.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.rlutcs.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.rlutcs</td>
       <td>toa_outgoing_longwave_flux_assuming_clear_sky</td>
       <td>W m-2</td>
@@ -364,7 +364,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.rsds.tavg-u-hxy-u.day.GLB</td>
+      <td>atmos.rsds.tavg-u-hxy-u.day.glb</td>
       <td>day.rsds</td>
       <td>surface_downwelling_shortwave_flux_in_air</td>
       <td>W m-2</td>
@@ -373,7 +373,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.rsds.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.rsds.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.rsds</td>
       <td>surface_downwelling_shortwave_flux_in_air</td>
       <td>W m-2</td>
@@ -382,7 +382,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.rsdscs.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.rsdscs.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.rsdscs</td>
       <td>surface_downwelling_shortwave_flux_in_air_assuming_clear_sky</td>
       <td>W m-2</td>
@@ -391,7 +391,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.rsdt.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.rsdt.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.rsdt</td>
       <td>toa_incoming_shortwave_flux</td>
       <td>W m-2</td>
@@ -400,7 +400,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.rsus.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.rsus.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.rsus</td>
       <td>surface_upwelling_shortwave_flux_in_air</td>
       <td>W m-2</td>
@@ -409,7 +409,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>fld_s01i235 - fld_s01i201</td>
     </tr>
     <tr>
-      <td>atmos.rsuscs.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.rsuscs.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.rsuscs</td>
       <td>surface_upwelling_shortwave_flux_in_air_assuming_clear_sky</td>
       <td>W m-2</td>
@@ -418,7 +418,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.rsut.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.rsut.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.rsut</td>
       <td>toa_outgoing_shortwave_flux</td>
       <td>W m-2</td>
@@ -427,7 +427,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.rsutcs.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.rsutcs.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.rsutcs</td>
       <td>toa_outgoing_shortwave_flux_assuming_clear_sky</td>
       <td>W m-2</td>
@@ -436,7 +436,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.sfcWind.tavg-h10m-hxy-u.day.GLB</td>
+      <td>atmos.sfcWind.tavg-h10m-hxy-u.day.glb</td>
       <td>day.sfcWind</td>
       <td>wind_speed</td>
       <td>m s-1</td>
@@ -445,7 +445,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.sfcWind.tavg-h10m-hxy-u.mon.GLB</td>
+      <td>atmos.sfcWind.tavg-h10m-hxy-u.mon.glb</td>
       <td>Amon.sfcWind</td>
       <td>wind_speed</td>
       <td>m s-1</td>
@@ -454,7 +454,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.sftlf.ti-u-hxy-u.fx.GLB</td>
+      <td>atmos.sftlf.ti-u-hxy-u.fx.glb</td>
       <td>fx.sftlf</td>
       <td>land_area_fraction</td>
       <td>%</td>
@@ -463,7 +463,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.ta.tavg-p19-hxy-air.day.GLB</td>
+      <td>atmos.ta.tavg-p19-hxy-air.day.glb</td>
       <td>day.ta</td>
       <td>air_temperature</td>
       <td>K</td>
@@ -472,7 +472,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.ta.tavg-p19-hxy-air.mon.GLB</td>
+      <td>atmos.ta.tavg-p19-hxy-air.mon.glb</td>
       <td>Amon.ta</td>
       <td>air_temperature</td>
       <td>K</td>
@@ -481,7 +481,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.ta.tpt-p3-hxy-air.6hr.GLB</td>
+      <td>atmos.ta.tpt-p3-hxy-air.6hr.glb</td>
       <td>6hrPlevPt.ta</td>
       <td>air_temperature</td>
       <td>K</td>
@@ -490,7 +490,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.tas.tavg-h2m-hxy-u.day.GLB</td>
+      <td>atmos.tas.tavg-h2m-hxy-u.day.glb</td>
       <td>day.tas</td>
       <td>air_temperature</td>
       <td>K</td>
@@ -499,7 +499,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.tas.tavg-h2m-hxy-u.mon.GLB</td>
+      <td>atmos.tas.tavg-h2m-hxy-u.mon.glb</td>
       <td>Amon.tas</td>
       <td>air_temperature</td>
       <td>K</td>
@@ -508,7 +508,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.tas.tmax-h2m-hxy-u.day.GLB</td>
+      <td>atmos.tas.tmax-h2m-hxy-u.day.glb</td>
       <td>day.tasmax</td>
       <td>air_temperature</td>
       <td>K</td>
@@ -517,7 +517,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.tas.tmaxavg-h2m-hxy-u.mon.GLB</td>
+      <td>atmos.tas.tmaxavg-h2m-hxy-u.mon.glb</td>
       <td>Amon.tasmax</td>
       <td>air_temperature</td>
       <td>K</td>
@@ -526,7 +526,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.tas.tmin-h2m-hxy-u.day.GLB</td>
+      <td>atmos.tas.tmin-h2m-hxy-u.day.glb</td>
       <td>day.tasmin</td>
       <td>air_temperature</td>
       <td>K</td>
@@ -535,7 +535,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.tas.tminavg-h2m-hxy-u.mon.GLB</td>
+      <td>atmos.tas.tminavg-h2m-hxy-u.mon.glb</td>
       <td>Amon.tasmin</td>
       <td>air_temperature</td>
       <td>K</td>
@@ -544,7 +544,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.tas.tpt-h2m-hxy-u.3hr.GLB</td>
+      <td>atmos.tas.tpt-h2m-hxy-u.3hr.glb</td>
       <td>3hr.tas</td>
       <td>air_temperature</td>
       <td>K</td>
@@ -553,7 +553,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.tauu.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.tauu.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.tauu</td>
       <td>surface_downward_eastward_stress</td>
       <td>Pa</td>
@@ -562,7 +562,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.tauv.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.tauv.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.tauv</td>
       <td>surface_downward_northward_stress</td>
       <td>Pa</td>
@@ -571,7 +571,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.ts.tavg-u-hxy-u.mon.GLB</td>
+      <td>atmos.ts.tavg-u-hxy-u.mon.glb</td>
       <td>Amon.ts</td>
       <td>surface_temperature</td>
       <td>K</td>
@@ -580,7 +580,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.ua.tavg-p19-hxy-air.day.GLB</td>
+      <td>atmos.ua.tavg-p19-hxy-air.day.glb</td>
       <td>day.ua</td>
       <td>eastward_wind</td>
       <td>m s-1</td>
@@ -589,7 +589,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.ua.tavg-p19-hxy-air.mon.GLB</td>
+      <td>atmos.ua.tavg-p19-hxy-air.mon.glb</td>
       <td>Amon.ua</td>
       <td>eastward_wind</td>
       <td>m s-1</td>
@@ -598,7 +598,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.ua.tpt-p3-hxy-air.6hr.GLB</td>
+      <td>atmos.ua.tpt-p3-hxy-air.6hr.glb</td>
       <td>6hrPlevPt.ua</td>
       <td>eastward_wind</td>
       <td>m s-1</td>
@@ -607,7 +607,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.uas.tavg-h10m-hxy-u.day.GLB</td>
+      <td>atmos.uas.tavg-h10m-hxy-u.day.glb</td>
       <td>day.uas</td>
       <td>eastward_wind</td>
       <td>m s-1</td>
@@ -616,7 +616,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.uas.tavg-h10m-hxy-u.mon.GLB</td>
+      <td>atmos.uas.tavg-h10m-hxy-u.mon.glb</td>
       <td>Amon.uas</td>
       <td>eastward_wind</td>
       <td>m s-1</td>
@@ -625,7 +625,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.uas.tpt-h10m-hxy-u.3hr.GLB</td>
+      <td>atmos.uas.tpt-h10m-hxy-u.3hr.glb</td>
       <td>3hrPt.uas</td>
       <td>eastward_wind</td>
       <td>m s-1</td>
@@ -634,7 +634,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.va.tavg-p19-hxy-air.day.GLB</td>
+      <td>atmos.va.tavg-p19-hxy-air.day.glb</td>
       <td>day.va</td>
       <td>northward_wind</td>
       <td>m s-1</td>
@@ -643,7 +643,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.va.tavg-p19-hxy-air.mon.GLB</td>
+      <td>atmos.va.tavg-p19-hxy-air.mon.glb</td>
       <td>Amon.va</td>
       <td>northward_wind</td>
       <td>m s-1</td>
@@ -652,7 +652,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.va.tpt-p3-hxy-air.6hr.GLB</td>
+      <td>atmos.va.tpt-p3-hxy-air.6hr.glb</td>
       <td>6hrPlevPt.va</td>
       <td>northward_wind</td>
       <td>m s-1</td>
@@ -661,7 +661,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.vas.tavg-h10m-hxy-u.day.GLB</td>
+      <td>atmos.vas.tavg-h10m-hxy-u.day.glb</td>
       <td>day.vas</td>
       <td>northward_wind</td>
       <td>m s-1</td>
@@ -670,7 +670,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.vas.tavg-h10m-hxy-u.mon.GLB</td>
+      <td>atmos.vas.tavg-h10m-hxy-u.mon.glb</td>
       <td>Amon.vas</td>
       <td>northward_wind</td>
       <td>m s-1</td>
@@ -679,7 +679,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.vas.tpt-h10m-hxy-u.3hr.GLB</td>
+      <td>atmos.vas.tpt-h10m-hxy-u.3hr.glb</td>
       <td>3hrPt.vas</td>
       <td>northward_wind</td>
       <td>m s-1</td>
@@ -688,7 +688,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.wap.tavg-p19-hxy-air.mon.GLB</td>
+      <td>atmos.wap.tavg-p19-hxy-air.mon.glb</td>
       <td>Amon.wap</td>
       <td>lagrangian_tendency_of_air_pressure</td>
       <td>Pa s-1</td>
@@ -697,7 +697,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.wap.tavg-p19-hxy-u.day.GLB</td>
+      <td>atmos.wap.tavg-p19-hxy-u.day.glb</td>
       <td>day.wap</td>
       <td>lagrangian_tendency_of_air_pressure</td>
       <td>Pa s-1</td>
@@ -706,7 +706,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.zg.tavg-p19-hxy-air.day.GLB</td>
+      <td>atmos.zg.tavg-p19-hxy-air.day.glb</td>
       <td>day.zg</td>
       <td>geopotential_height</td>
       <td>m</td>
@@ -715,7 +715,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>atmos.zg.tavg-p19-hxy-air.mon.GLB</td>
+      <td>atmos.zg.tavg-p19-hxy-air.mon.glb</td>
       <td>Amon.zg</td>
       <td>geopotential_height</td>
       <td>m</td>
@@ -724,7 +724,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>land.evspsblsoi.tavg-u-hxy-lnd.mon.GLB</td>
+      <td>land.evspsblsoi.tavg-u-hxy-lnd.mon.glb</td>
       <td>Lmon.evspsblsoi</td>
       <td>water_evaporation_flux_from_soil</td>
       <td>kg m-2 s-1</td>
@@ -733,7 +733,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>land.evspsblveg.tavg-u-hxy-lnd.mon.GLB</td>
+      <td>land.evspsblveg.tavg-u-hxy-lnd.mon.glb</td>
       <td>Lmon.evspsblveg</td>
       <td>water_evaporation_flux_from_canopy</td>
       <td>kg m-2 s-1</td>
@@ -742,7 +742,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>land.lai.tavg-u-hxy-lnd.mon.GLB</td>
+      <td>land.lai.tavg-u-hxy-lnd.mon.glb</td>
       <td>Lmon.lai</td>
       <td>leaf_area_index</td>
       <td>1</td>
@@ -751,7 +751,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>average_tile(fld_s03i893)</td>
     </tr>
     <tr>
-      <td>land.mrro.tavg-u-hxy-lnd.mon.GLB</td>
+      <td>land.mrro.tavg-u-hxy-lnd.mon.glb</td>
       <td>Lmon.mrro</td>
       <td>runoff_flux</td>
       <td>kg m-2 s-1</td>
@@ -760,7 +760,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>fld_s08i234 + fld_s08i235</td>
     </tr>
     <tr>
-      <td>land.mrros.tavg-u-hxy-lnd.mon.GLB</td>
+      <td>land.mrros.tavg-u-hxy-lnd.mon.glb</td>
       <td>Lmon.mrros</td>
       <td>surface_runoff_flux</td>
       <td>kg m-2 s-1</td>
@@ -769,7 +769,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>land.mrso.tavg-u-hxy-lnd.mon.GLB</td>
+      <td>land.mrso.tavg-u-hxy-lnd.mon.glb</td>
       <td>Lmon.mrso</td>
       <td>mass_content_of_water_in_soil</td>
       <td>kg m-2</td>
@@ -778,7 +778,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>sum(fld_s08i223)</td>
     </tr>
     <tr>
-      <td>land.mrsofc.ti-u-hxy-lnd.fx.GLB</td>
+      <td>land.mrsofc.ti-u-hxy-lnd.fx.glb</td>
       <td>fx.mrsofc</td>
       <td>soil_moisture_content_at_field_capacity</td>
       <td>kg m-2</td>
@@ -787,7 +787,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>land.mrsol.tavg-d10cm-hxy-lnd.mon.GLB</td>
+      <td>land.mrsol.tavg-d10cm-hxy-lnd.mon.glb</td>
       <td>Lmon.mrsos</td>
       <td>mass_content_of_water_in_soil_layer</td>
       <td>kg m-2</td>
@@ -796,7 +796,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>calc_topsoil(fld_s08i223)</td>
     </tr>
     <tr>
-      <td>land.orog.ti-u-hxy-u.fx.GLB</td>
+      <td>land.orog.ti-u-hxy-u.fx.glb</td>
       <td>fx.orog</td>
       <td>surface_altitude</td>
       <td>m</td>
@@ -805,7 +805,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>land.rootd.ti-u-hxy-lnd.fx.GLB</td>
+      <td>land.rootd.ti-u-hxy-lnd.fx.glb</td>
       <td>fx.rootd</td>
       <td>root_depth</td>
       <td>m</td>
@@ -814,7 +814,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>land.sftgif.ti-u-hxy-u.fx.GLB</td>
+      <td>land.sftgif.ti-u-hxy-u.fx.glb</td>
       <td>fx.sftgif</td>
       <td>land_ice_area_fraction</td>
       <td>%</td>
@@ -823,7 +823,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>land.slthick.ti-sl-hxy-lnd.fx.GLB</td>
+      <td>land.slthick.ti-sl-hxy-lnd.fx.glb</td>
       <td>Efx.slthick</td>
       <td>cell_thickness</td>
       <td>m</td>
@@ -832,7 +832,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>landIce.mrfso.tavg-u-hxy-lnd.mon.GLB</td>
+      <td>landIce.mrfso.tavg-u-hxy-lnd.mon.glb</td>
       <td>Lmon.mrfso</td>
       <td>soil_frozen_water_content</td>
       <td>kg m-2</td>
@@ -841,7 +841,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>sum((fld_s08i223 * fld_s08i230))</td>
     </tr>
     <tr>
-      <td>landIce.snc.tavg-u-hxy-lnd.mon.GLB</td>
+      <td>landIce.snc.tavg-u-hxy-lnd.mon.glb</td>
       <td>LImon.snc</td>
       <td>surface_snow_area_fraction</td>
       <td>%</td>
@@ -850,7 +850,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>landIce.snw.tavg-u-hxy-lnd.mon.GLB</td>
+      <td>landIce.snw.tavg-u-hxy-lnd.mon.glb</td>
       <td>LImon.snw</td>
       <td>surface_snow_amount</td>
       <td>kg m-2</td>
@@ -859,7 +859,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>ocean.areacello.ti-u-hxy-u.fx.GLB</td>
+      <td>ocean.areacello.ti-u-hxy-u.fx.glb</td>
       <td>Ofx.areacello</td>
       <td>cell_area</td>
       <td>m2</td>
@@ -868,7 +868,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>ocean.basin.ti-u-hxy-u.fx.GLB</td>
+      <td>ocean.basin.ti-u-hxy-u.fx.glb</td>
       <td>Ofx.basin</td>
       <td>region</td>
       <td>1</td>
@@ -877,7 +877,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>ocean.bigthetao.tavg-ol-hxy-sea.mon.GLB</td>
+      <td>ocean.bigthetao.tavg-ol-hxy-sea.mon.glb</td>
       <td>Omon.bigthetao</td>
       <td>sea_water_conservative_temperature</td>
       <td>degC</td>
@@ -886,7 +886,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.deptho.ti-u-hxy-sea.fx.GLB</td>
+      <td>ocean.deptho.ti-u-hxy-sea.fx.glb</td>
       <td>Ofx.deptho</td>
       <td>sea_floor_depth_below_geoid</td>
       <td>m</td>
@@ -895,7 +895,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>ocean.hfds.tavg-u-hxy-sea.mon.GLB</td>
+      <td>ocean.hfds.tavg-u-hxy-sea.mon.glb</td>
       <td>Omon.hfds</td>
       <td>surface_downward_heat_flux_in_sea_water</td>
       <td>W m-2</td>
@@ -904,7 +904,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>sum_vars(var)</td>
     </tr>
     <tr>
-      <td>ocean.hfgeou.ti-u-hxy-sea.fx.GLB</td>
+      <td>ocean.hfgeou.ti-u-hxy-sea.fx.glb</td>
       <td>Ofx.hfgeou</td>
       <td>upward_geothermal_heat_flux_at_sea_floor</td>
       <td>W m-2</td>
@@ -913,7 +913,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>ocean.masscello.tavg-ol-hxy-sea.mon.GLB</td>
+      <td>ocean.masscello.tavg-ol-hxy-sea.mon.glb</td>
       <td>Omon.masscello</td>
       <td>sea_water_mass_per_unit_area</td>
       <td>kg m-2</td>
@@ -922,7 +922,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.masscello.ti-ol-hxy-sea.fx.GLB</td>
+      <td>ocean.masscello.ti-ol-hxy-sea.fx.glb</td>
       <td>Ofx.masscello</td>
       <td>sea_water_mass_per_unit_area</td>
       <td>kg m-2</td>
@@ -931,7 +931,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.mlotst.tavg-u-hxy-sea.mon.GLB</td>
+      <td>ocean.mlotst.tavg-u-hxy-sea.mon.glb</td>
       <td>Omon.mlotst</td>
       <td>ocean_mixed_layer_thickness_defined_by_sigma_t</td>
       <td>m</td>
@@ -940,7 +940,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.sftof.ti-u-hxy-u.fx.GLB</td>
+      <td>ocean.sftof.ti-u-hxy-u.fx.glb</td>
       <td>Ofx.sftof</td>
       <td>sea_area_fraction</td>
       <td>%</td>
@@ -949,7 +949,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>ocean.so.tavg-ol-hxy-sea.mon.GLB</td>
+      <td>ocean.so.tavg-ol-hxy-sea.mon.glb</td>
       <td>Omon.so</td>
       <td>sea_water_salinity</td>
       <td>1E-03</td>
@@ -958,7 +958,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.sos.tavg-u-hxy-sea.day.GLB</td>
+      <td>ocean.sos.tavg-u-hxy-sea.day.glb</td>
       <td>Oday.sos</td>
       <td>sea_surface_salinity</td>
       <td>1E-03</td>
@@ -967,7 +967,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.sos.tavg-u-hxy-sea.mon.GLB</td>
+      <td>ocean.sos.tavg-u-hxy-sea.mon.glb</td>
       <td>Omon.sos</td>
       <td>sea_surface_salinity</td>
       <td>1E-03</td>
@@ -976,7 +976,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.tauuo.tavg-u-hxy-sea.mon.GLB</td>
+      <td>ocean.tauuo.tavg-u-hxy-sea.mon.glb</td>
       <td>Omon.tauuo</td>
       <td>downward_x_stress_at_sea_water_surface</td>
       <td>N m-2</td>
@@ -985,7 +985,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.tauvo.tavg-u-hxy-sea.mon.GLB</td>
+      <td>ocean.tauvo.tavg-u-hxy-sea.mon.glb</td>
       <td>Omon.tauvo</td>
       <td>downward_y_stress_at_sea_water_surface</td>
       <td>N m-2</td>
@@ -994,7 +994,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.thetao.tavg-ol-hxy-sea.mon.GLB</td>
+      <td>ocean.thetao.tavg-ol-hxy-sea.mon.glb</td>
       <td>Omon.thetao</td>
       <td>sea_water_potential_temperature</td>
       <td>degC</td>
@@ -1003,7 +1003,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>kelvin_to_celsius(pot_temp)</td>
     </tr>
     <tr>
-      <td>ocean.thkcello.tavg-ol-hxy-sea.mon.GLB</td>
+      <td>ocean.thkcello.tavg-ol-hxy-sea.mon.glb</td>
       <td>Omon.thkcello</td>
       <td>cell_thickness</td>
       <td>m</td>
@@ -1012,7 +1012,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.thkcello.ti-ol-hxy-sea.fx.GLB</td>
+      <td>ocean.thkcello.ti-ol-hxy-sea.fx.glb</td>
       <td>Ofx.thkcello</td>
       <td>cell_thickness</td>
       <td>m</td>
@@ -1021,7 +1021,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.tos.tavg-u-hxy-sea.day.GLB</td>
+      <td>ocean.tos.tavg-u-hxy-sea.day.glb</td>
       <td>Oday.tos</td>
       <td>sea_surface_temperature</td>
       <td>degC</td>
@@ -1030,7 +1030,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>kelvin_to_celsius(surface_temp)</td>
     </tr>
     <tr>
-      <td>ocean.tos.tavg-u-hxy-sea.mon.GLB</td>
+      <td>ocean.tos.tavg-u-hxy-sea.mon.glb</td>
       <td>Omon.tos</td>
       <td>sea_surface_temperature</td>
       <td>degC</td>
@@ -1039,7 +1039,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>kelvin_to_celsius(surface_temp)</td>
     </tr>
     <tr>
-      <td>ocean.umo.tavg-ol-hxy-sea.mon.GLB</td>
+      <td>ocean.umo.tavg-ol-hxy-sea.mon.glb</td>
       <td>Omon.umo</td>
       <td>ocean_mass_x_transport</td>
       <td>kg s-1</td>
@@ -1048,7 +1048,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.uo.tavg-ol-hxy-sea.mon.GLB</td>
+      <td>ocean.uo.tavg-ol-hxy-sea.mon.glb</td>
       <td>Omon.uo</td>
       <td>sea_water_x_velocity</td>
       <td>m s-1</td>
@@ -1057,7 +1057,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.vmo.tavg-ol-hxy-sea.mon.GLB</td>
+      <td>ocean.vmo.tavg-ol-hxy-sea.mon.glb</td>
       <td>Omon.vmo</td>
       <td>ocean_mass_y_transport</td>
       <td>kg s-1</td>
@@ -1066,7 +1066,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.vo.tavg-ol-hxy-sea.mon.GLB</td>
+      <td>ocean.vo.tavg-ol-hxy-sea.mon.glb</td>
       <td>Omon.vo</td>
       <td>sea_water_y_velocity</td>
       <td>m s-1</td>
@@ -1075,7 +1075,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.wmo.tavg-ol-hxy-sea.mon.GLB</td>
+      <td>ocean.wmo.tavg-ol-hxy-sea.mon.glb</td>
       <td>Omon.wmo</td>
       <td>upward_ocean_mass_transport</td>
       <td>kg s-1</td>
@@ -1084,7 +1084,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.wo.tavg-ol-hxy-sea.mon.GLB</td>
+      <td>ocean.wo.tavg-ol-hxy-sea.mon.glb</td>
       <td>Omon.wo</td>
       <td>upward_sea_water_velocity</td>
       <td>m s-1</td>
@@ -1093,7 +1093,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.zos.tavg-u-hxy-sea.day.GLB</td>
+      <td>ocean.zos.tavg-u-hxy-sea.day.glb</td>
       <td>Oday.zos</td>
       <td>sea_surface_height_above_geoid</td>
       <td>m</td>
@@ -1102,7 +1102,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.zos.tavg-u-hxy-sea.mon.GLB</td>
+      <td>ocean.zos.tavg-u-hxy-sea.mon.glb</td>
       <td>Omon.zos</td>
       <td>sea_surface_height_above_geoid</td>
       <td>m</td>
@@ -1111,7 +1111,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td></td>
     </tr>
     <tr>
-      <td>ocean.zostoga.tavg-u-hm-sea.mon.GLB</td>
+      <td>ocean.zostoga.tavg-u-hm-sea.mon.glb</td>
       <td>Omon.zostoga</td>
       <td>global_average_thermosteric_sea_level_change</td>
       <td>m</td>
@@ -1120,7 +1120,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>calc_zostoga(pot_temp, dht)</td>
     </tr>
     <tr>
-      <td>seaIce.siconc.tavg-u-hxy-u.day.GLB</td>
+      <td>seaIce.siconc.tavg-u-hxy-u.day.glb</td>
       <td>SIday.siconc</td>
       <td>sea_ice_area_fraction</td>
       <td>%</td>
@@ -1129,7 +1129,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>seaIce.siconc.tavg-u-hxy-u.mon.GLB</td>
+      <td>seaIce.siconc.tavg-u-hxy-u.mon.glb</td>
       <td>SImon.siconc</td>
       <td>sea_ice_area_fraction</td>
       <td>%</td>
@@ -1138,7 +1138,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>seaIce.simass.tavg-u-hxy-si.mon.GLB</td>
+      <td>seaIce.simass.tavg-u-hxy-si.mon.glb</td>
       <td>SImon.simass</td>
       <td>sea_ice_amount</td>
       <td>kg m-2</td>
@@ -1147,7 +1147,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>seaIce.sithick.tavg-u-hxy-si.mon.GLB</td>
+      <td>seaIce.sithick.tavg-u-hxy-si.mon.glb</td>
       <td>SImon.sithick</td>
       <td>sea_ice_thickness</td>
       <td>m</td>
@@ -1156,7 +1156,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>seaIce.sitimefrac.tavg-u-hxy-sea.mon.GLB</td>
+      <td>seaIce.sitimefrac.tavg-u-hxy-sea.mon.glb</td>
       <td>SImon.sitimefrac</td>
       <td>fraction_of_time_with_sea_ice_area_fraction_above_threshold</td>
       <td>1</td>
@@ -1165,7 +1165,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>seaIce.siu.tavg-u-hxy-si.mon.GLB</td>
+      <td>seaIce.siu.tavg-u-hxy-si.mon.glb</td>
       <td>SImon.siu</td>
       <td>sea_ice_x_velocity</td>
       <td>m s-1</td>
@@ -1174,7 +1174,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>seaIce.siv.tavg-u-hxy-si.mon.GLB</td>
+      <td>seaIce.siv.tavg-u-hxy-si.mon.glb</td>
       <td>SImon.siv</td>
       <td>sea_ice_y_velocity</td>
       <td>m s-1</td>
@@ -1183,7 +1183,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>seaIce.snd.tavg-u-hxy-sn.mon.GLB</td>
+      <td>seaIce.snd.tavg-u-hxy-sn.mon.glb</td>
       <td>SImon.sisnthick</td>
       <td>surface_snow_thickness</td>
       <td>m</td>
@@ -1192,7 +1192,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>unknown</td>
     </tr>
     <tr>
-      <td>seaIce.ts.tavg-u-hxy-si.mon.GLB</td>
+      <td>seaIce.ts.tavg-u-hxy-si.mon.glb</td>
       <td>SImon.sitemptop</td>
       <td>surface_temperature</td>
       <td>K</td>

@@ -13,18 +13,15 @@ Please direct any issues, feedback or queries on the data specification to <data
 
 ## Directory and Filename
 ### Directory Structure
-ACCESS-ESM1.6 data output has the following struction under the current working directory:
+The directory structure for ACCESS-ESM1.6 data output is still being finalised.
+The current draft has the following structure under the current working directory:
 
 `<run>/output<xxx>/<realm>/<filename.nc>`
 
 ### File naming
-ACCESS-ESM1.6 files will follow the following naming convention:
+ACCESS-ESM1.6 filenames are also still under development
 
-- Atmosphere (UMx output): `TBC`
-- Ocean (MOM5 output): `TBC`
-- Sea-ice (CICEx output): `TBC`
-
-All information contained in filenames should be present in file metadata attributes however it is best practice to avoid renaming files.
+All information contained in filenames should be present in file metadata attributes.
 
 ## File content
 Output files should be NetCDF4 files wherever practical.
