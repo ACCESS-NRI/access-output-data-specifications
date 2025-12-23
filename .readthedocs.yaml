@@ -8,11 +8,8 @@ build:
     pre_install:
       - pip install mkdocs-with-pdf
     post_build:
-      - pwd
       - mkdir -pv $READTHEDOCS_OUTPUT/pdf/
-      - ls -R
       - mv $READTHEDOCS_OUTPUT/html/pdf/document.pdf $READTHEDOCS_OUTPUT/pdf/$READTHEDOCS_PROJECT.pdf
-      - ls $READTHEDOCS_OUTPUT/pdf/
 mkdocs:
   configuration: mkdocs.yaml
 
