@@ -8,6 +8,8 @@ jobs:
   add-pdf-to-release:
     name: Add PDF to Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Setup python
         uses: actions/setup-python@v6
