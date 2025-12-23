@@ -25,6 +25,9 @@ jobs:
       - name: make-docs
         run: mkdocs build
 
+      - name: rename-pdf
+        run: mv ./site/pdf/document.pdf ./site/pdf/access-output-data-specifications.pdf
+
       - name: list-files
         run: ls -R
 
@@ -32,4 +35,4 @@ jobs:
         run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
         
 #      - name: Upload Release Files
-#        run: gh release upload ${{ github.event.release.tag_name }} ${{ FILES }}
+#        run: gh release upload ${{ github.event.release.tag_name }} ./site/pdf/access-output-data-specifications.pdf
