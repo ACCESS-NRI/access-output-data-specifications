@@ -10,7 +10,7 @@ build:
     post_build:
       - pwd
       - mkdir -pv $READTHEDOCS_OUTPUT/pdf/
-      - tree
+      - ls -R
       - mv ./site/builds.pdf $READTHEDOCS_OUTPUT/pdf/$READTHEDOCS_PROJECT.pdf
       - ls $READTHEDOCS_OUTPUT/pdf/
 mkdocs:
