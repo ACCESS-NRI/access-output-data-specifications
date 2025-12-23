@@ -4,6 +4,9 @@ on:
   release:
     types: [created]
 
+env:
+  PDF_NAME: access-output-data-specifications-${{ github.event.release.tag_name }}.pdf
+
 jobs:
   add-pdf-to-release:
     name: Add PDF to Release
@@ -26,10 +29,10 @@ jobs:
         run: mkdocs build
 
       - name: rename-pdf
-        run: mv ./site/pdf/document.pdf ./site/pdf/access-output-data-specifications-${{ github.event.release.tag_name }}.pdf
+        run: mv ./site/pdf/document.pdf ./site/pdf/$PDF_NAME
 
       - name: Authenticate GitHub CLI
         run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
         
       - name: Upload Release Files
-        run: gh release upload ${{ github.event.release.tag_name }} ./site/pdf/access-output-data-specifications.pdf
+        run: gh release upload ${{ github.event.release.tag_name }} ./site/pdf/$PDF_NAME
