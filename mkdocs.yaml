@@ -4,6 +4,7 @@ theme:
   highlightjs: true
 plugins:
   - search
+  - with-pdf
 
 nav:
   - Specification: specification.md
