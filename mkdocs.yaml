@@ -1,0 +1,18 @@
+site_name: ACCESS Output Data Specifications
+theme:
+  name: readthedocs
+  highlightjs: true
+plugins:
+  - search
+
+nav:
+  - Specification: specification.md
+  - Mapping: mapping.md
+
+extra_css:
+  - https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css
+  - css/table.css
+
+extra_javascript:
+  - https://cdn.datatables.net/2.3.4/js/dataTables.min.js
+  - javascripts/site.js

@@ -1,0 +1,51 @@
+name: Build Docs
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-docs:
+    name: build-docs
+    runs-on: ubuntu-latest
+    # Commit step needs write permissions
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v5
+        # The following is needed to allow add-and-commit to know which branch to work on
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Setup python
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.12.3
+
+      - name: Install dependancies
+        run: python -m pip install -r requirements.txt
+
+      - name: Create config file for MOPPy
+        # Details don't matter
+        run: |
+          email=data.access.nri@anu.edu.au
+          name=ACCESS-NRI
+          url=data.access.nri@anu.edu.au
+          mkdir ~/.moppy
+          echo -e "creator_email: $email\ncreator_name: $name\ncreator_url: $url\norganisation: $name" > ~/.moppy/user.yml
+
+      - name: Update specification.md
+        run: python scripts/update_specification.py
+
+      - name: Update mapping.md
+        run: python scripts/update_mapping.py
+
+      - name: Commit updated docs
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: docs/*.md

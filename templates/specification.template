@@ -1,0 +1,62 @@
+# ACCESS Output Data Specifications
+This document provides an overview of the data specifications for data produced
+by ACCESS models.
+The initial draft of this specification targets ESM1.6 and will be expanded to other ACCESS models in time.
+This version of the specification is intended to be relatively lightweight as a first step towards bringing data
+produced in the ACCESS ecosystem towards a common data and metadata standard.
+
+Included here are file and directory naming conventions, variable conventions, and variable and global attributes.
+Variable mappings from ACCESS output variables to CMIP6/7 variables can be found [here](mapping.md).
+
+More information on the ACCESS models can be found [here](https://www.access-nri.org.au/models/).
+Please direct any issues, feedback or queries on the data specification to <data.access.nri@anu.edu.au>.
+
+## Directory and Filename
+### Directory Structure
+The directory structure for ACCESS-ESM1.6 data output is still being finalised.
+The current draft has the following structure under the current working directory:
+
+`<run>/output<xxx>/<realm>/<filename.nc>`
+
+### File naming
+ACCESS-ESM1.6 filenames are also still under development
+
+All information contained in filenames should be present in file metadata attributes.
+
+## File content
+Output files should be NetCDF4 files wherever practical.
+Data variables should be compressed using `zlib` with deflate level of at least 1 and shuffle enabled — if the compression level used is greater than 1 please consider the benefit of improved compression ratios against cost of increased compression/decompression times.
+
+Where possible files should conform to the CF metadata conventions (version 1.11) and use the CF Convention Standard Name Table.
+
+For ACCESS-ESM1.6 every file should contain a single data variable/field from a single simulation.
+
+## Time Dimensions
+Time dimensions should use the `proleptic Gregorian` calendar with units of `days since yyyy-mm-dd hh:mm`.
+Where possible `time_bnds` should be included as an additional coordinate variable.
+
+## Metadata Attributes
+
+### Global Attributes
+Global attributes provide information on the context for the data such as the creation time, experiment it is part of, or science configurations used.
+All the attributes in the table below are recommended but not all are required, see the `Required` column, and attributes not specified are permitted.
+All these global attributes have type `string`.
+Where possible sort the attributes alphabetically by name.
+
+Note that for any given experiment run the combination of `model` and `model_version` should identify the code, and `experiment_repo` and `run_id` should identify a specific commit in the repository containing the configuration used.
+
+{global_attrs_table}
+
+### Variable Attributes
+Variable attributes provide information on the data variable such as the units used, standard_name, or cell_methods used to generate the data.
+In netCDF files there can be multiple coordinate variables such as `time`, `latitude`, or `time_bnds` and the main output field variable of which there should be only one.
+Where possible variables and their attributes should follow CF-v1.11 conventions.
+
+{variable_attrs_table}
+
+## Acknowledgements
+We would like to acknowlege the specifications and conventions we have used and consulted to construct this specification and the tremendous work of their authors:
+
+- [CMIP6](https://pcmdi.llnl.gov/CMIP6/Guide/dataUsers.html)
+- [CORDEX](https://cordex.org/2024/04/12/the-cordex-cmip6-archiving-specifications-for-dynamical-downscaling-now-published/)
+- [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3)
