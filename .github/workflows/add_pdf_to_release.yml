@@ -19,6 +19,9 @@ jobs:
       - name: Install dependancies
         run: python -m pip install mkdocs mkdocs-with-pdf
 
+      - name: Checkout source
+        uses: actions/checkout@v5
+
       - name: make-docs
         run: mkdocs build
 
