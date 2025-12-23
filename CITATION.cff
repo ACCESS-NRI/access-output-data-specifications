@@ -4,12 +4,27 @@ version: 0.1.0
 license: "CC-BY-4.0"
 type: software
 abstract: "The ACCESS Output Data Specification describes the requirements for output data of the Australian Community Climate and Earth Science Simulator models. The repository also contains scripts to automatically generate the specification documents."
-message: "Author list currently incomplete"
+message: ""
 authors:
   - given-names: Joshua
     family-names: Torrance
     affiliation: ACCESS-NCI
     orcid: "https://orcid.org/0000-0002-0463-2967"
+  - given-names: Aidan
+    family-names: Heerdegen
+    affiliation: ACCESS-NCI
+    orcid: "https://orcid.org/0000-0002-4481-4896"
+  - given-names: Clare
+    family-names: Richards
+    affiliation: ACCESS-NCI
+  - given-names: Martin
+    family-names: Dix
+    affiliation: ACCESS-NCI
+    orcid: "https://orcid.org/0000-0002-7534-0654"
+  - given-names: Kelsey
+    family-names: Druken
+    affiliation: ACCESS-NCI
+    orcid: "https://orcid.org/0000-0002-9442-5709"
 keywords:
   - Climate
   - Science
