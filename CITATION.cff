@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "ACCESS Output Data Specification"
+version: 0.1.0
+license: "CC-BY-4.0"
+type: software
+abstract: "The ACCESS Output Data Specification describes the requirements for output data of the Australian Community Climate and Earth Science Simulator models. The repository also contains scripts to automatically generate the specification documents."
+message: "Author list currently incomplete"
+authors:
+  - given-names: Joshua
+    family-names: Torrance
+    affiliation: ACCESS-NCI
+    orcid: "https://orcid.org/0000-0002-0463-2967"
+keywords:
+  - Climate
+  - Science
+  - Model output
+  - Data specification
+  - ACCESS-NRI
