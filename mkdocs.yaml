@@ -4,6 +4,7 @@ theme:
   highlightjs: true
 plugins:
   - search
+  - with-pdf
 
 nav:
   - Specification: specification.md
@@ -16,3 +17,11 @@ extra_css:
 extra_javascript:
   - https://cdn.datatables.net/2.3.4/js/dataTables.min.js
   - javascripts/site.js
+
+plugins:
+  - with-pdf:
+      author: ACCESS-NRI
+      cover_subtitle: ""
+      toc_level: 3
+      exclude_pages:
+        - 'mapping/'
