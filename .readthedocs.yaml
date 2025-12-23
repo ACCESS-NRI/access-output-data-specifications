@@ -4,6 +4,9 @@ build:
   os: "ubuntu-24.04"
   tools:
     python: "3"
+  jobs:
+    pre_install:
+      - pip install mkdocs-with-pdf
 
 mkdocs:
   configuration: mkdocs.yaml
