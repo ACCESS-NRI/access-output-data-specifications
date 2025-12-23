@@ -8,8 +8,7 @@ build:
     pre_install:
       - pip install mkdocs-with-pdf
     post_build:
-      - echo "READTHEDOCS_OUTPUT: $READTHEDOCS_OUTPUT"
-      - echo "READTHEDOCS_PROJECT: $READTHEDOCS_PROJECT"
+      - pwd
       - mkdir -pv $READTHEDOCS_OUTPUT/pdf/
       - tree
       - mv ./site/builds.pdf $READTHEDOCS_OUTPUT/pdf/$READTHEDOCS_PROJECT.pdf
