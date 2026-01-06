@@ -43,6 +43,6 @@ jobs:
           python ./scripts/zenodo_update.py \
             --access-token "${{ secrets.ZENODO_SANDBOX_TOKEN }}" \
             --version "${{ github.event.release.tag_name }}" \
-            --id "" \
+            --id "$ZENODO_RECORD_ID" \
             --files ./site/pdf/$PDF_NAME \
             --verbose
