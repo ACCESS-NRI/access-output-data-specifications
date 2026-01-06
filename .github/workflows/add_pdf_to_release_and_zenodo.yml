@@ -6,7 +6,7 @@ on:
 
 env:
   PDF_NAME: access-output-data-specifications-${{ github.event.release.tag_name }}.pdf
-  ZENODO_RECORD_ID: 421509
+  ZENODO_RECORD_ID: 18167024
 
 jobs:
   add-pdf-to-release:
@@ -41,8 +41,10 @@ jobs:
       - name: Update Zenodo Version and Files
         run: |
           python ./scripts/zenodo_update.py \
-            --access-token "${{ secrets.ZENODO_SANDBOX_TOKEN }}" \
+            --access-token "${{ secrets.ZENODO_TOKEN }}" \
             --version "${{ github.event.release.tag_name }}" \
             --id "$ZENODO_RECORD_ID" \
             --files ./site/pdf/$PDF_NAME \
+            --production \
+            --draft \
             --verbose
