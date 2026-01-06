@@ -1,4 +1,4 @@
-name: Add PDF to Release
+name: Add PDF to Release and update Zenodo
 
 on:
   release:
@@ -6,10 +6,11 @@ on:
 
 env:
   PDF_NAME: access-output-data-specifications-${{ github.event.release.tag_name }}.pdf
+  ZENODO_RECORD_ID: 421509
 
 jobs:
   add-pdf-to-release:
-    name: Add PDF to Release
+    name: Add PDF to Release and Zenodo
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -36,3 +37,12 @@ jobs:
         
       - name: Upload Release Files
         run: gh release upload ${{ github.event.release.tag_name }} ./site/pdf/$PDF_NAME
+
+      - name: Update Zenodo Version and Files
+        run: |
+          python ./scripts/zenodo_update.py \
+            --access-token "${{ secrets.ZENODO_SANDBOX_TOKEN }}" \
+            --version "${{ github.event.release.tag_name }}" \
+            --id "" \
+            --files ./site/pdf/$PDF_NAME \
+            --verbose
