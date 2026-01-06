@@ -140,9 +140,12 @@ def main():
             response.raise_for_status()
 
     except requests.HTTPError as e:
+        logging.error("Something went wrong during API calls:")
         print(e)
         print(response)
         print(response.json())
+
+        exit(1)
 
     logging.debug("Zenodo update completed")
 
