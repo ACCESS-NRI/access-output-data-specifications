@@ -4,7 +4,12 @@ build:
   os: "ubuntu-24.04"
   tools:
     python: "3"
-
+  jobs:
+    pre_install:
+      - pip install mkdocs-with-pdf
+    post_build:
+      - mkdir -pv $READTHEDOCS_OUTPUT/pdf/
+      - mv $READTHEDOCS_OUTPUT/html/pdf/document.pdf $READTHEDOCS_OUTPUT/pdf/$READTHEDOCS_PROJECT.pdf
 mkdocs:
   configuration: mkdocs.yaml
 
