@@ -22,6 +22,7 @@ plugins:
   - with-pdf:
       author: ACCESS-NRI
       cover_subtitle: ""
+      copyright: "{release_version}"
       toc_level: 3
       exclude_pages:
         - 'mapping/'
