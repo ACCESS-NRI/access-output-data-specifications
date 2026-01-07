@@ -26,6 +26,9 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v5
 
+      - name: Set version in mkdocs.yaml
+        run: sed -i -e "s/{release_version}/${{ github.event.release.tag_name }}/g" ./mkdocs.yaml
+
       - name: make-docs
         run: mkdocs build
 
