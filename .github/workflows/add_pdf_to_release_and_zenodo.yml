@@ -9,7 +9,7 @@ env:
   ZENODO_RECORD_ID: 18167024
 
 jobs:
-  add-pdf-to-release:
+  add-pdf-to-release-zenodo:
     name: Add PDF to Release and Zenodo
     runs-on: ubuntu-latest
     permissions:
