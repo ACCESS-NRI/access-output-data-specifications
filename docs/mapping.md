@@ -45,7 +45,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>mass_fraction_of_cloud_ice_in_air</td>
       <td>kg kg-1</td>
       <td>mon</td>
-      <td>fld_s02i309 (gridbox lsc qcf in radiation   kg/kg)</td>
+      <td>fld_s02i309 (gridbox lsc qcf in radiation&nbsp;&nbsp; kg/kg)</td>
       <td>level_to_height(fld_s02i309)</td>
     </tr>
     <tr>
@@ -81,7 +81,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>mass_fraction_of_cloud_liquid_water_in_air</td>
       <td>kg kg-1</td>
       <td>mon</td>
-      <td>fld_s02i308 (gridbox lsc qcl in radiation   kg/kg)</td>
+      <td>fld_s02i308 (gridbox lsc qcl in radiation&nbsp;&nbsp; kg/kg)</td>
       <td>level_to_height(fld_s02i308)</td>
     </tr>
     <tr>
@@ -270,7 +270,7 @@ if a cell is 'unknown' then a mapping has not been defined by ACCESS-MOPPy.
       <td>atmosphere_mass_content_of_water_vapor</td>
       <td>kg m-2</td>
       <td>mon</td>
-      <td>fld_s30i404 (total column wet mass  rho grid),<br>fld_s30i403 (total column dry mass  rho grid),<br>fld_s30i405 (atmosphere_cloud_liquid_water_content),<br>fld_s30i406 (atmosphere_cloud_ice_content)</td>
+      <td>fld_s30i404 (total column wet mass&nbsp;&nbsp;rho grid),<br>fld_s30i403 (total column dry mass&nbsp;&nbsp;rho grid),<br>fld_s30i405 (atmosphere_cloud_liquid_water_content),<br>fld_s30i406 (atmosphere_cloud_ice_content)</td>
       <td>fld_s30i404 - (fld_s30i403 + fld_s30i405 + fld_s30i406)</td>
     </tr>
     <tr>
