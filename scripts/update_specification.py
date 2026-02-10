@@ -10,7 +10,7 @@ with open("templates/specification.template", "r") as f:
     specification_template = f.read()
 
 # Load the global and variable attribute tables from the schema
-SCHEMA_URL = "https://raw.githubusercontent.com/ACCESS-NRI/schema/refs/heads/output-data-schema-tweaks/au.org.access-nri/model/output/file-metadata/2-0-0/2-0-0.json"
+SCHEMA_URL = "https://raw.githubusercontent.com/ACCESS-NRI/schema/refs/heads/main/au.org.access-nri/model/output/file-metadata/2-0-0/2-0-0.json"
 global_table, variable_table = schema2md(SCHEMA_URL)
 d = {
     "global_attrs_table": global_table,
