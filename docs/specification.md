@@ -2,8 +2,9 @@
 This document provides an overview of the data specifications for data produced
 by ACCESS models.
 The initial draft of this specification targets ESM1.6 and will be expanded to other ACCESS models in time.
-This version of the specification is intended to be relatively lightweight as a first step towards bringing data
-produced in the ACCESS ecosystem towards a common data and metadata standard.
+This version of the specification is intended to be relatively lightweight as a first step towards the standardisations of data
+produced by the ACCESS ecosystem.
+The goal of this specification is to provide a consistent and uniform experience for users across all ACCESS models by enabling the embedding of established community conventions and defined data specifications directly in the ACCESS software and release processes.
 
 Included here are file and directory naming conventions, variable conventions, and variable and global attributes.
 Variable mappings from ACCESS output variables to CMIP6/7 variables can be found [here](mapping.md).
@@ -24,7 +25,7 @@ ACCESS-ESM1.6 filenames are also still under development
 All information contained in filenames should be present in file metadata attributes.
 
 ## File content
-Output files should be NetCDF4 files wherever practical.
+Output files should be NetCDF4 files.
 Data variables should be compressed using `zlib` with deflate level of at least 1 and shuffle enabled — if the compression level used is greater than 1 please consider the benefit of improved compression ratios against cost of increased compression/decompression times.
 
 Where possible files should conform to the CF metadata conventions (version 1.11) and use the CF Convention Standard Name Table.
@@ -41,9 +42,9 @@ Where possible `time_bnds` should be included as an additional coordinate variab
 Global attributes provide information on the context for the data such as the creation time, experiment it is part of, or science configurations used.
 All the attributes in the table below are recommended but not all are required, see the `Required` column, and attributes not specified are permitted.
 All these global attributes have type `string`.
-Where possible sort the attributes alphabetically by name.
+Attributes should be sorted alphabetically by name.
 
-Note that for any given experiment run the combination of `model` and `model_version` should identify the code, and `experiment_repo` and `run_id` should identify a specific commit in the repository containing the configuration used.
+Note that for any given experiment run the combination of `model` and `model_version` should identify the code used to generate the data, and `experiment_repo` and `run_id` should identify a specific commit in the repository containing the configuration used.
 
 | Title                  | Description                                                                                                                                                                                                                   | Examples                                                                                                                  | Rules                                                                                                                                                                                            | Required   |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
