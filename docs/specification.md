@@ -21,19 +21,15 @@ The current draft has the following structure under the current working director
 ### File naming
 ACCESS-ESM1.6 filenames are also still under development
 
-All information contained in filenames should be present in file metadata attributes.
+All information contained in filenames will be present in file metadata attributes.
 
 ## File content
-Output files should be NetCDF4 files.
-Data variables should be compressed using `zlib` with deflate level of at least 1 and shuffle enabled — if the compression level used is greater than 1 please consider the benefit of improved compression ratios against cost of increased compression/decompression times.
+Output files will be NetCDF4 files with data variables compressed using `zlib` with deflate level of at least 1 and shuffle enabled.
+If a compression level greater than 1 is used please consider the benefit of improved compression ratios against cost of increased compression/decompression times.
 
-Where possible files should conform to the CF metadata conventions (version 1.11) and use the CF Convention Standard Name Table.
+Where possible files will conform to the CF metadata conventions (version 1.11) and use the CF Convention Standard Name Table.
 
-For ACCESS-ESM1.6 every file should contain a single data variable/field from a single simulation.
-
-## Time Dimensions
-Time dimensions should use the `proleptic Gregorian` calendar with units of `days since yyyy-mm-dd hh:mm`.
-Where possible `time_bnds` should be included as an additional coordinate variable.
+For ACCESS-ESM1.6 every file will contain a single data variable/field from a single simulation.
 
 ## Metadata Attributes
 
@@ -41,9 +37,10 @@ Where possible `time_bnds` should be included as an additional coordinate variab
 Global attributes provide information on the context for the data such as the creation time, experiment it is part of, or science configurations used.
 All the attributes in the table below are recommended but not all are required, see the `Required` column, and attributes not specified are permitted.
 All these global attributes have type `string`.
-Attributes should be sorted alphabetically by name.
+Attributes are sorted alphabetically by name.
 
-Note that for any given experiment run the combination of `model` and `model_version` should identify the code used to generate the data, and `experiment_repo` and `run_id` should identify a specific commit in the repository containing the configuration used.
+For any given experiment run, the combination of `model` and `model_version` identify the code used to generate the data.
+`experiment_repo` and `run_id` identify a specific commit in the repository containing the configuration used.
 
 | Title                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Examples                                                                                                                  | Rules                                                                                                                                                                                            | Required   |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
@@ -83,6 +80,22 @@ Where possible variables and their attributes should follow CF-v1.11 conventions
 | long_name     | A long descriptive name which may, for example, be used for labelling plots.                                                                                                 | string | <ul><li>Near-Surface Air Temperature</li><li>latitude</li><li>Potential Evapotranspiration</li></ul>                               |
 | standard_name | Where possible use the CF standard_name of the variable, otherwise use a unique short phrase separated by underscores to describe the variable.                              | string | <ul><li>air_pressure_at_sea_level</li><li>latitude</li><li>water_potential_evaporation_flux</li></ul>                              |
 | units         | The units of measurement for the variable                                                                                                                                    | string | <ul><li>K</li><li>m-2 s-1</li></ul>                                                                                                |
+
+## `time` and `time_bnds`
+
+Variables describing the time dimension must be named `time` and have the following metadata:
+
+| Title         | Description                                                                                                                                                                                                                                             | Type   | Examples                                                                                                                                          |
+|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| axis          | Must have the value 'T'                                                                                                                                                                                                                                 |        |                                                                                                                                                   |
+| bounds        | Must have the value 'time_bnds'                                                                                                                                                                                                                         |        |                                                                                                                                                   |
+| calendar      | Calendar defines the set of valid datetimes and their order. Follows the CF-Convention names using lower-case strings. It is recommended that "proleptic_gregorian" is used for data with leap days and "no_leap"/"365_day" for data without leap days. | string |                                                                                                                                                   |
+| long_name     | Must have the value 'time'                                                                                                                                                                                                                              |        |                                                                                                                                                   |
+| standard_name | Must have the value 'time'                                                                                                                                                                                                                              |        |                                                                                                                                                   |
+| units         | Units for time should be given as "days since X" where X is a date (yyyy-mm-dd) or a datetime (yyyy-mm-dd HH:MM or yyyy-mm-dd HH:MM:SS)                                                                                                                 | string | <ul><li>days since 0001-01-01 00:00:00</li><li>days since 0001-01-01 00:00</li><li>days since 1970-01-01</li><li>days since -5000-12-25</li></ul> |
+
+Where possible, `time` variables will have their boundaries described by a `time_bnds` variable.
+The `time_bnds` variable itself will have no attributes.
 
 ## Acknowledgements
 We would like to acknowlege the specifications and conventions we have used and consulted to construct this specification and the tremendous work of their authors:
