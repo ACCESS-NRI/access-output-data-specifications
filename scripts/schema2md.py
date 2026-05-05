@@ -24,6 +24,12 @@ VARIABLE_COLS = {
     "type": "Type",
     "examples": "Examples",
 }
+TIME_COLS = {
+    "title": "Title",
+    "description": "Description",
+    "type": "Type",
+    "examples": "Examples",
+}
 
 MAPPING_COLS = {
     "cmip7_compound_name": "CMIP7 Name",
@@ -42,9 +48,6 @@ def process_subschema(subschema_dict, required, cols, dot_point_lists=True):
 
     # Add required
     df = df.assign(required=["Yes" if row_name in required else "No" for row_name in df.index])
-
-    # Sort dataframe alphabetically by attribute names
-    df.sort_values("title", inplace=True, key=lambda col: col.str.lower())
 
     # Escape |s in regex patterns
     try:
@@ -117,6 +120,21 @@ def process_subschema(subschema_dict, required, cols, dot_point_lists=True):
             # Not every schema has 'pattern', 'oneOf', 'enum'
             pass
 
+    # If "title" is missing fill it with the index
+    df["title"] = df["title"].fillna(df.index.to_series())
+
+    # If description is missing then use the const to give a description
+    try:
+        const_str = "Must have the value '{}'"
+        extended_const = df["const"].map(lambda s: const_str.format(s), na_action="ignore")
+        df["description"] = df["description"].fillna(extended_const)
+    except KeyError:
+        # Not every schema will have const
+        pass
+
+    # Sort dataframe alphabetically by attribute names
+    df.sort_values("title", inplace=True, key=lambda col: col.str.lower())
+
     # Replace nans with empty strings
     df = df.fillna("")
 
@@ -147,12 +165,17 @@ def schema2md(schema_url, dot_point_lists=True):
     global_required = global_attrs["required"]
     global_md_str = process_subschema(global_attrs, global_required, GLOBAL_COLS)
 
-    # Process the variable metadata
+    # Process the generic variable metadata
     variable_attrs = schema["properties"]["variables"]
     variable_required = global_attrs["required"]
     variable_md_str = process_subschema(variable_attrs["patternProperties"]["^.+$"], variable_required, VARIABLE_COLS)
 
-    return global_md_str, variable_md_str
+    # Process metadata for the time variable
+    time_attrs =  variable_attrs["properties"]['time']
+    time_required = variable_attrs["properties"]['time']['required']
+    time_md_str = process_subschema(time_attrs, time_required, TIME_COLS)
+
+    return global_md_str, variable_md_str, time_md_str
 
 
 def _parse_mapping(map_d):
