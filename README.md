@@ -1,7 +1,7 @@
 # ACCESS Output Data Specification
 
 [![readthedocs](https://app.readthedocs.org/projects/access-output-data-specifications/badge/?version=latest&style=flat)](https://access-output-data-specifications.readthedocs.io/en/latest/)
-[![zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.18167024.svg)](https://doi.org/10.5281/zenodo.18167024)
+[![zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.18167023.svg)](https://doi.org/10.5281/zenodo.18167023)
 
 The Access Output Data Specification repository contains the documentation
 describing:
