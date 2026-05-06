@@ -10,11 +10,12 @@ with open("templates/specification.template", "r") as f:
     specification_template = f.read()
 
 # Load the global and variable attribute tables from the schema
-SCHEMA_URL = "https://raw.githubusercontent.com/ACCESS-NRI/schema/refs/heads/main/au.org.access-nri/model/output/file-metadata/2-0-0/2-0-0.json"
-global_table, variable_table = schema2md(SCHEMA_URL)
+SCHEMA_URL = "https://raw.githubusercontent.com/ACCESS-NRI/schema/refs/heads/main/au.org.access-nri/model/output/file-metadata/2-1-0/2-1-0.json"
+global_table, variable_table, time_md_str = schema2md(SCHEMA_URL)
 d = {
     "global_attrs_table": global_table,
     "variable_attrs_table": variable_table,
+    "time_attrs_table": time_md_str,
 }
 
 # Put the tables into the template and output to file
