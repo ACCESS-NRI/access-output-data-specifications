@@ -19,7 +19,7 @@ The current draft has the following structure under the current working director
 `<run>/output<xxx>/<realm>/<filename.nc>`
 
 ### File naming
-ACCESS-ESM1.6 filenames are also still under development
+ACCESS-ESM1.6 filenames are under development.
 
 All information contained in filenames will be present in file metadata attributes.
 
@@ -36,7 +36,6 @@ For ACCESS-ESM1.6 every file will contain a single data variable/field from a si
 ### Global Attributes
 Global attributes provide information on the context for the data such as the creation time, experiment it is part of, or science configurations used.
 All the attributes in the table below are recommended but not all are required, see the `Required` column, and attributes not specified are permitted.
-All these global attributes have type `string`.
 Attributes are sorted alphabetically by name.
 
 For any given experiment run, the combination of `model` and `model_version` identify the code used to generate the data.

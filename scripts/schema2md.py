@@ -14,6 +14,7 @@ from access_moppy.utilities import load_model_mappings
 GLOBAL_COLS = {
     "title": "Title",
     "description": "Description",
+    "type": "Type",
     "examples": "Examples",
     "rules": "Rules",
     "required": "Required",
@@ -29,6 +30,7 @@ TIME_COLS = {
     "description": "Description",
     "type": "Type",
     "examples": "Examples",
+    "required": "Required",
 }
 
 MAPPING_COLS = {
@@ -128,6 +130,23 @@ def process_subschema(subschema_dict, required, cols, dot_point_lists=True):
         const_str = "Must have the value '{}'"
         extended_const = df["const"].map(lambda s: const_str.format(s), na_action="ignore")
         df["description"] = df["description"].fillna(extended_const)
+    except KeyError:
+        # Not every schema will have const
+        pass
+
+    # If example is missing, fill it with const if present
+    try:
+        df["examples"] = df["examples"].fillna(df["const"])
+    except KeyError:
+        # Not every schema will have const
+        pass
+
+    # If type is missing, fill it with the type of const if present
+    try:
+        # At the moment there are only two types
+        df["type"] = df["type"].fillna(df["const"].map(
+            lambda e: "string" if isinstance(e, str) else "number", na_action="ignore")
+        )
     except KeyError:
         # Not every schema will have const
         pass
