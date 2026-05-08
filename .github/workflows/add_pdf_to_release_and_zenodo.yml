@@ -4,9 +4,7 @@ on:
   release:
     types: [created]
   # FIXME: UNDO THIS CHANGE BEFORE MERGING
-  push:
-    branches:
-      - main
+  pull_request:
 
 env:
   PDF_NAME: access-output-data-specifications-dont-publish-me.pdf
