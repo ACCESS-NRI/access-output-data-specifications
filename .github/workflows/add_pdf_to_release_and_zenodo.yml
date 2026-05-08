@@ -8,7 +8,7 @@ on:
 
 env:
   PDF_NAME: access-output-data-specifications-dont-publish-me.pdf
-  ZENODO_RECORD_ID: 421508
+  ZENODO_RECORD_ID: 496896
 
 jobs:
   add-pdf-to-release-zenodo:
