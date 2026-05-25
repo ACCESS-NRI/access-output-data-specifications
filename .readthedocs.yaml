@@ -6,6 +6,8 @@ build:
     python: "3"
   jobs:
     pre_install:
+      - mkdir -p "$HOME/.config/pip"
+      - printf "[global]\nuploaded-prior-to = P7D\n" > "$HOME/.config/pip/pip.conf"
       - pip install mkdocs-with-pdf
     post_build:
       - mkdir -pv $READTHEDOCS_OUTPUT/pdf/
