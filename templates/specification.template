@@ -13,7 +13,7 @@ Please direct any issues, feedback or queries on the data specification to <data
 
 ## Directory and Filename
 ### Directory Structure
-The directory structure for ACCESS-ESM1.6 data obeys the following:
+The directory structure for ACCESS-ESM1.6 output data obeys the following:
 
 `<experiment_name>/output<xxx>/<realm>/<filename.nc>`
 
@@ -25,7 +25,7 @@ Where:
 
 ### Filenames
 
-For ACCESS-ESM1.6 `filename` follows the pattern originally designed for [ACCESS-OM3](https://access-om3-configs.access-hive.org.au/latest/configurations/Ocean_diagnostics/#access-om3-diagnostic-filename-conventions) which is as follows:
+For ACCESS-ESM1.6 filenames follow the pattern originally designed for [ACCESS-OM3](https://access-om3-configs.access-hive.org.au/latest/configurations/Ocean_diagnostics/#access-om3-diagnostic-filename-conventions) which is as follows:
 
 `<model>.<component>.<dimension>[.<field>[+<vertical_coordinate>][+d2]].<frequency>.<time_cell_method>.<datestamp>.nc`
 
