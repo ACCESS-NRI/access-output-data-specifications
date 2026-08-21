@@ -3,5 +3,5 @@ pandas == 2.3.3
 tabulate == 0.9.0
 CMIP7-data-request-api
 access-moppy @ git+https://github.com/ACCESS-NRI/ACCESS-MOPPy@49032ad
-mkdocs-with-pdf ==0.9.3
+mkdocs-with-pdf == 0.9.3
 requests == 2.32.5
