@@ -13,15 +13,30 @@ Please direct any issues, feedback or queries on the data specification to <data
 
 ## Directory and Filename
 ### Directory Structure
-The directory structure for ACCESS-ESM1.6 data output is still being finalised.
-The current draft has the following structure under the current working directory:
+The directory structure for ACCESS-ESM1.6 data obeys the following:
+`<experiment_name>/output<xxx>/<realm>/<filename.nc>`
 
-`<run>/output<xxx>/<realm>/<filename.nc>`
+Where:
+- `<experiment_name>` is the name of the experiment in question
+- `xxx` is the three or four digit number for the output directory label. These numbers start from zero, increment by one for each year of data, and have at least three digits.
+- `realm` is one of `atmosphere`, `ice`, and `ocean`
 
-### File naming
-ACCESS-ESM1.6 filenames are under development.
+### Filenames
 
-All information contained in filenames will be present in file metadata attributes.
+For ACCESS-ESM1.6 `filename` follows the pattern originally designed for [ACCESS-OM3](https://access-om3-configs.access-hive.org.au/latest/configurations/Ocean_diagnostics/#access-om3-diagnostic-filename-conventions) which is as follows:
+
+`<model>.<component>.<dimension>[.<field>[+<vertical_coordinate>][+d2]].<frequency>.<time_cell_method>.<datestamp>.nc`
+
+- `<model>` is the model used to create the data, e.g. `access-esm1p6`
+- `<component>` is the component of the model used to create the data, e.g. `cice5`, `mom5`, or `um7p3`
+- `<dimension>` describes the number of spatial dimensions for the file, either `2d`, `3d`, or `scalar`
+- `<field>` is the name of the field/variable for data in the file. Field can be ommitted for a collection of `scalar` values
+- `<vertical_coordinate>` is only used for non-native vertical coordinates to describe those coordinates
+- `<frequency>` is the temporal interval between records for these data following the patterns described [below](#Global-Attributes)
+- `<time_cell_method>` is the method used to aggregate data temporally, e.g. `mean`,  `maximum`, `snap`
+- `<datestamp>` describes the date for the data in the file. Datestamp will be truncated depending on the output file temporal interval, e.g. use `YYYY` for yearly output files, or `YYYY-MM` for monthly output files.
+
+All information contained in output data filenames should be present in file metadata attributes.
 
 ## File content
 Output files will be NetCDF4 files with data variables compressed using `zlib` with deflate level of at least 1 and shuffle enabled.
@@ -29,7 +44,7 @@ If a compression level greater than 1 is used please consider the benefit of imp
 
 Where possible files will conform to the CF metadata conventions (version 1.11) and use the CF Convention Standard Name Table.
 
-For ACCESS-ESM1.6 every file will contain a single data variable/field from a single simulation.
+For ACCESS-ESM1.6 every file will contain a single data variable/field from a single simulation with the exception of `scalar` data which can be combined into a single output file.
 
 ## Metadata Attributes
 
