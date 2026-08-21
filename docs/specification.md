@@ -20,8 +20,8 @@ The directory structure for ACCESS-ESM1.6 output data obeys the following:
 Where:
 
 - `<experiment_name>` is the name of the experiment in question
-- `xxx` is the three or four digit number for the output directory label. These numbers start from zero, increment by one for each year of data, and have at least three digits.
-- `realm` is one of `atmosphere`, `ice`, and `ocean`
+- `<xxx>` is the three or four digit number for the output directory label. These numbers start from zero, increment by one for each year of data, and have at least three digits.
+- `<realm>` is one of `atmosphere`, `ice`, and `ocean`
 
 ### Filenames
 
