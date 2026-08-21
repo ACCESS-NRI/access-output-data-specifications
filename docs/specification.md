@@ -30,13 +30,13 @@ For ACCESS-ESM1.6 filenames follow the pattern originally designed for [ACCESS-O
 `<model>.<component>.<dimension>[.<field>[+<vertical_coordinate>][+d2]].<frequency>.<time_cell_method>.<datestamp>.nc`
 
 - `<model>` is the model used to create the data, e.g. `access-esm1p6`
-- `<component>` is the component of the model used to create the data, e.g. `cice5`, `mom5`, or `um7p3`
-- `<dimension>` describes the number of spatial dimensions for the file, either `2d`, `3d`, or `scalar`
-- `<field>` is the name of the field/variable for data in the file. Field can be ommitted for a collection of `scalar` values
-- `<vertical_coordinate>` is only used for non-native vertical coordinates to describe those coordinates
-- `<frequency>` is the temporal interval between records for these data following the patterns described [below](#Global-Attributes)
-- `<time_cell_method>` is the method used to aggregate data temporally, e.g. `mean`,  `maximum`, `snap`
-- `<datestamp>` describes the date for the data in the file. Datestamp will be truncated depending on the output file temporal interval, e.g. use `YYYY` for yearly output files, or `YYYY-MM` for monthly output files.
+- `<component>` is the component of the model used to create the data, e.g. `cice5`, `mom5`, or `um7p3`.
+- `<dimension>` describes the number of spatial dimensions for the file, either `2d`, `3d`, or `scalar`.
+- `<field>` is the name of the field/variable for data in the file. Field can be ommitted for a collection of `scalar` values.
+- `<vertical_coordinate>` is only used for non-native vertical coordinates to describe those coordinates otherwise it should be omitted.
+- `<frequency>` is the temporal interval between records for these data following the patterns described [below](#Global-Attributes).
+- `<time_cell_method>` is the method used to aggregate data temporally, e.g. `mean`,  `maximum`, `snap`. `<time_cell_method>` should be omitted if no known method was used.
+- `<datestamp>` describes the date for the data in the file. Datestamp will be truncated depending on the output file temporal interval, e.g. use `YYYY` for yearly output files, or `YYYY-MM` for monthly output files. `<timestamp>` should be omitted for data with no temporal dimension, e.g. fixed/`fx` data.
 
 All information contained in output data filenames should be present in file metadata attributes.
 
