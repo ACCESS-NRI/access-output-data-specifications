@@ -3,10 +3,12 @@ name: Add PDF to Release and update Zenodo
 on:
   release:
     types: [created]
+  # FIXME: UNDO THIS CHANGE BEFORE MERGING
+  pull_request:
 
 env:
-  PDF_NAME: access-output-data-specifications-${{ github.event.release.tag_name }}.pdf
-  ZENODO_RECORD_ID: 18167024
+  PDF_NAME: access-output-data-specifications-dont-publish-me.pdf
+  ZENODO_RECORD_ID: 496896
 
 jobs:
   add-pdf-to-release-zenodo:
@@ -20,14 +22,14 @@ jobs:
         with:
           python-version: 3.12.3
 
-      - name: Install dependancies
-        run: python -m pip install mkdocs mkdocs-with-pdf requests
-
       - name: Checkout source
         uses: actions/checkout@v5
 
+      - name: Install dependancies
+        run: python -m pip install -r requirements.txt
+
       - name: Set version in mkdocs.yaml
-        run: sed -i -e "s/{release_version}/${{ github.event.release.tag_name }}/g" ./mkdocs.yaml
+        run: sed -i -e "s/{release_version}/XXX/g" ./mkdocs.yaml
 
       - name: make-docs
         run: mkdocs build
@@ -38,16 +40,15 @@ jobs:
       - name: Authenticate GitHub CLI
         run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
         
-      - name: Upload Release Files
-        run: gh release upload ${{ github.event.release.tag_name }} ./site/pdf/$PDF_NAME
+#      - name: Upload Release Files
+#        run: gh release upload ${{ github.event.release.tag_name }} ./site/pdf/$PDF_NAME
 
       - name: Update Zenodo Version and Files
         run: |
           python ./scripts/zenodo_update.py \
-            --access-token "${{ secrets.ZENODO_TOKEN }}" \
+            --access-token "${{ secrets.ZENODO_SANDBOX_TOKEN }}" \
             --version "${{ github.event.release.tag_name }}" \
             --id "$ZENODO_RECORD_ID" \
             --files ./site/pdf/$PDF_NAME \
-            --production \
             --draft \
             --verbose
