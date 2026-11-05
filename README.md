@@ -14,3 +14,11 @@ Much of the content is automatically generated from:
 - [ACCESS-MOPPy](https://github.com/ACCESS-NRI/ACCESS-MOPPy)'s variable mappings
 
 This specification is hosted on readthedocs [here](https://access-output-data-specifications.readthedocs.io/en/latest/).
+
+## Licence
+
+Except where otherwise noted, the documentation and training material in this repository are licensed under [Creative Commons Attribution 4.0 International](LICENSE).
+
+Original software, scripts, and executable code examples (including code cells in notebooks) are licensed under the [Apache License, Version 2.0](LICENSES/Apache-2.0.txt).
+
+Third-party material and datasets retain their original licences and attribution requirements.
